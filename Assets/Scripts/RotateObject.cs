@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+
 /// <summary>
 /// MAY BE USED LATER, ROTATES OBJECT AROUND OTHER OBJECT
 /// </summary>
+
 public class RotateObject : MonoBehaviour {
 	
 	public float rotationSpeed = 200;

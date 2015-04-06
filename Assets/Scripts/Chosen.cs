@@ -19,28 +19,33 @@ public class Chosen : MonoBehaviour
 	MouseOrbitImproved cameraScript;
 
 	public float health = 5.0F;
-	
+
 	void OnLevelWasLoaded (int level)
 	{
+		//When the Build Scene is loaded
 		if (level == 0) {
 			cameraScript = Camera.main.GetComponent<MouseOrbitImproved> ();
-			OnClick ();
+			OnClick ();  //Simulate a click on this module
 		}
 	}
 
+	//Collision detection
 	void OnTriggerEnter(Collider col)
 	{
 		if (col.gameObject.name == "Plasma(Clone)") {
 			if(health == 1 && GetComponent<Rigidbody>() == null) 
 			{
-				DestroyThisCube();
+				DestroyThisModule();
 			}
 			else health--;
 			Destroy (col.gameObject);
 		}
 	}
 
-	void DestroyThisCube()
+	//Safely destroy this module, by removing its Sphere Collider from the parent Player,
+	// disabling its light, making it parentless, adding a rigidbody for collision
+	// and making it a non-trigger collider
+	void DestroyThisModule()
 	{
 		//TODO: Spring cube out
 		Vector3 spherePos = transform.localPosition;
@@ -67,6 +72,8 @@ public class Chosen : MonoBehaviour
 		cameraScript.OnScroll ();
 	}
 
+	//Actually destroys the module on double click or X button
+	//Also moves the frame around it to the Main Module
 	public void OnDoubleClick ()
 	{
 		GameObject.Find("Main Module").GetComponent<Chosen>().OnClick();
@@ -86,6 +93,7 @@ public class Chosen : MonoBehaviour
 		GameObject.FindGameObjectWithTag ("Cube Frame").transform.parent = transform;
 	}
 
+	//The rotate button
 	public void Rotate()
 	{
 		transform.rotation = Quaternion.Euler (0, transform.eulerAngles.y + 90, 0);

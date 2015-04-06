@@ -6,17 +6,18 @@ public class Boundry
 {
 	public float xMin, xMax, zMin, zMax;
 }
+
 public class Move : MonoBehaviour
 {
 	public Boundry boundry;
 	public float speed = 10;
 	public float tilt = 10;
 	public float tiltLerpSpeed = 5;
+	public float deadZone = 0.0001F;
 	public float maxVelocity = 10;
 
 	public GameObject joystickMovement;
 	public GameObject joystickRotation;
-	public float deadZone = 0.0001F; 
 
 	private float angle = 0;
 	private UIJoyStick joyMove;
@@ -28,61 +29,56 @@ public class Move : MonoBehaviour
 
 	void OnLevelWasLoaded (int level)
 	{
+		//When the Arena Scene loads
 		if (level == 1) {
 			sqrMaxVelocity = maxVelocity * maxVelocity;
 			rigid = GetComponent<Rigidbody> ();
 			rigid.isKinematic = false;
 			joystickMovement = GameObject.Find ("Movement");
 			joystickRotation = GameObject.Find ("Rotation");
+
 			if (joystickMovement != null && joystickRotation != null) {
 				joyMove = joystickMovement.GetComponent<UIJoyStick> ();
 				joyRotate = joystickRotation.GetComponent<UIJoyStick> ();
 			}
 		}
-
-		if (level == 2) {
-			transform.parent = GameObject.Find ("ImageTarget").transform;
-			transform.localScale = new Vector3(1,1,1);
-		}
 	}
 
-	void FixedUpdate()
+	void FixedUpdate ()
 	{
+		//If we can assign the joysticks correctly
 		if (joyMove != null && joyRotate != null) {
 
 			// Apply movement from move joystick
 			movement = new Vector3 (joyMove.joyStickPosX, 0.0F, joyMove.joyStickPosY);
 
-			//Keybord movement 
+			//Keyboard movement. Uncomment this and comment out the one below for keyboard testing
 			//movement = new Vector3 (Input.GetAxis("Horizontal"), 0.0F, Input.GetAxis("Vertical"));
 			rigid.velocity = movement * speed;
 
-			if(rigid.velocity.sqrMagnitude > sqrMaxVelocity){
+			//No idea what this does here...
+			if (rigid.velocity.sqrMagnitude > sqrMaxVelocity) {
 				rigid.velocity = rigid.velocity.normalized * maxVelocity;
 			}
 
-			//transform.Rotate(0,joyRotate.joyStickPosX*speed,0);  //USE ONLY THIS
-			//
-			//			//movement.Normalize();
-			//
-			//			GetComponent<CharacterController>().SimpleMove(movement*speed);
-
 			//Boundries of the playfield
-						GetComponent<Rigidbody>().position = new Vector3
+			rigid.position = new Vector3
 							(
-								Mathf.Clamp(GetComponent<Rigidbody>().position.x,boundry.xMin,boundry.xMax),
+								Mathf.Clamp (rigid.position.x, boundry.xMin, boundry.xMax),
 								0.0F,
-								Mathf.Clamp(GetComponent<Rigidbody>().position.z,boundry.zMin,boundry.zMax)
-							);
+								Mathf.Clamp (rigid.position.z, boundry.zMin, boundry.zMax)
+			);
 
-			if((Mathf.Abs(joyRotate.joyStickPosX) > deadZone && Mathf.Abs(joyRotate.joyStickPosY) > deadZone)){
-				angle = Mathf.Atan2(-joyRotate.joyStickPosX,-joyRotate.joyStickPosY) * Mathf.Rad2Deg;
+			//Dead zone callibration, in order to not have 0 rotation
+			if ((Mathf.Abs (joyRotate.joyStickPosX) > deadZone && Mathf.Abs (joyRotate.joyStickPosY) > deadZone)) {
+				angle = Mathf.Atan2 (-joyRotate.joyStickPosX, -joyRotate.joyStickPosY) * Mathf.Rad2Deg;
 			}
 
-			Quaternion rot = Quaternion.Euler(0, angle, 0);
-			Vector3 tiltAxis = Vector3.Cross(Vector3.up, rigid.velocity);
-			rot = Quaternion.AngleAxis(tilt, tiltAxis) * rot;
-			rigid.rotation = Quaternion.Lerp(rigid.rotation,rot,Time.deltaTime*tiltLerpSpeed);
+			//Actual rotation
+			Quaternion rot = Quaternion.Euler (0, angle, 0);
+			Vector3 tiltAxis = Vector3.Cross (Vector3.up, rigid.velocity);
+			rot = Quaternion.AngleAxis (tilt, tiltAxis) * rot;
+			rigid.rotation = Quaternion.Lerp (rigid.rotation, rot, Time.deltaTime * tiltLerpSpeed);
 
 			//Works but uses momentum
 			//GetComponent<Rigidbody> ().AddTorque(transform.up*joyRotate.joyStickPosX*speed,ForceMode.VelocityChange);

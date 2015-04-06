@@ -18,6 +18,8 @@ public class DragItem : UIDragDropItem
 			float y = surface.transform.position.y;
 			float z = surface.transform.position.z;
 
+
+			//THIS MAKES A BUG, SOMETIMES RESETING THE NEWLY PLACED CUBE TO COORDINATES 0,0,0
 			//Place cubes next to each other
 			if (UICamera.lastWorldPosition.x == x + offset) {
 				trans.position = new Vector3 (x + 2 * offset, y, z);
@@ -40,7 +42,7 @@ public class DragItem : UIDragDropItem
 
 			child.GetComponent<Chosen> ().OnClick ();
 
-			// Destroy this icon as it's no longer needed
+			// Destroy this NGUI drag icon as it's no longer needed
 			NGUITools.Destroy (gameObject);
 			return;
 		}

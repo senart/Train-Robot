@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// This script allows for an object to orbit around another object (called 'ship')
+/// It can be used for shields orbiting around a module (like electrons around a proton)
+/// </summary>
+
 public class Orbit : MonoBehaviour {
 	
 	public Vector3 v = Vector3.zero;

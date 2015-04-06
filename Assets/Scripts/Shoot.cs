@@ -6,6 +6,7 @@ public class Shoot : MonoBehaviour {
 	public GameObject shot;
 	public Transform shotSpawn;
 	public float fireRate = 0.25F;
+	public bool shootNonStop = false;  //For testing purposes
 
 	float nextFire=0.0F;
 	bool loadedLevel = false;
@@ -14,6 +15,13 @@ public class Shoot : MonoBehaviour {
 	{
 		if (loadLevel == 1)
 			loadedLevel = true;
+	}
+
+	void FixedUpdate()
+	{
+		if (shootNonStop) {
+			Fire ();
+		}
 	}
 
 	public void Fire()

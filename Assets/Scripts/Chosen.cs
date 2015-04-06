@@ -43,8 +43,8 @@ public class Chosen : MonoBehaviour
 	}
 
 	//Safely destroy this module, by removing its Sphere Collider from the parent Player,
-	// disabling its light, making it parentless, adding a rigidbody for collision
-	// and making it a non-trigger collider
+	// disabling its light, making it parentless, adding a rigidbody for collision,
+	// removing 1 from the Player mass and making its collider non-trigger
 	void DestroyThisModule()
 	{
 		//TODO: Spring cube out
@@ -58,6 +58,7 @@ public class Chosen : MonoBehaviour
 		gameObject.gameObject.transform.parent = null;
 		gameObject.AddComponent<Rigidbody> ().drag = 1;
 		gameObject.GetComponent<SphereCollider>().isTrigger = false;
+		GameObject.Find ("Player").GetComponent<Rigidbody> ().mass--;
 	}
 
 	void OnDrag ()

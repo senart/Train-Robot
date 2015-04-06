@@ -9,7 +9,8 @@ Version
 -------------
 
 The current version of Train Your Robot is **0.0.1**
-
+>**NOTE**: The UI is not missing, just the sprites for the buttons were removed
+>Everything is still functional, simply a new NGUI Atlas must be created and some sprites assigned.
 > **So far we have implemented the following:**
 > - Main Module
 > - Move Module

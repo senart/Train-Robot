@@ -21,6 +21,6 @@ public class GotoArena : MonoBehaviour {
 
 		Destroy(GameObject.FindGameObjectWithTag ("Cube Frame"));  //destroy frame
 
-		Application.LoadLevel (1);
+		Application.LoadLevel ("control");
 	}
 }

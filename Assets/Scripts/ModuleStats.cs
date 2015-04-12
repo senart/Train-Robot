@@ -8,11 +8,11 @@ public class ModuleStats : Stats {
 	public int startingHP;
 	public int startingProtection;
 
-	public string name;
+	public string moduleName;
 	public int damage;
 	public int protection;
 	public float HP;
-	
+
 	void Awake()
 	{
 		HP = startingHP;

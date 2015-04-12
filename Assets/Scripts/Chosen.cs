@@ -23,12 +23,13 @@ public class Chosen : MonoBehaviour
 {
 	MouseOrbitImproved cameraScript;
 
-	void Awake ()
+	void Start()
 	{
+		//Tells the rotate script to rotate around the MAIN CAMERA
 		cameraScript = Camera.main.GetComponent<MouseOrbitImproved> ();
-		OnClick ();  //Simulate a click on this module
+		OnClick (); 
 	}
-
+	
 	//Collision detection
 	void OnTriggerEnter (Collider col)
 	{
@@ -109,11 +110,13 @@ public class Chosen : MonoBehaviour
 	{
 		//Basically checks if we are on the first loadlevel (main scene)...
 		if (cameraScript != null) {
+			//...then set the camera rotation target and the frame position to the clicked module
 			cameraScript.changeTarget (transform);
 			GameObject.FindGameObjectWithTag ("Cube Frame").transform.position = transform.position;
 			GameObject.FindGameObjectWithTag ("Cube Frame").transform.parent = transform;
+			//Displays the seperate module stats
 			GameObject.Find ("Module Stats").GetComponent<ShowModuleStats> ().
-			UpdateStats (transform.GetComponent<ModuleStats> ());
+				UpdateStats (transform.GetComponent<ModuleStats> ());
 		}
 	}
 

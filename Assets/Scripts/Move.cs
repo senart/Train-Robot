@@ -17,7 +17,6 @@ public class Move : MonoBehaviour
 	public float maxVelocity = 10;
 	public GameObject joystickMovement;
 	public GameObject joystickRotation;
-	
 	private float angle;
 	private UIJoyStick joyMove;
 	private UIJoyStick joyRotate;
@@ -30,7 +29,7 @@ public class Move : MonoBehaviour
 	{
 		//When the Arena Scene loads
 		if (level == 1) {
-			speed = GetComponent<Stats>().speed;
+			speed = GetComponent<Stats> ().speed;
 			sqrMaxVelocity = maxVelocity * maxVelocity;
 			rigid = GetComponent<Rigidbody> ();
 			rigid.isKinematic = false;
@@ -46,8 +45,9 @@ public class Move : MonoBehaviour
 			//REMOVE THE FUCKING HALOS AS SOON AS THERE ARE DIFFERENT TEXTURES FOR THE MODULES
 			//Solves a bug where Halo spams erros if it's enabled beforehand. Later, use different textures instead of Halos
 			foreach (Transform childTrans in GameObject.Find ("Player").GetComponentInChildren<Transform>()) {
-				Behaviour halo = (childTrans.GetComponent("Halo") as Behaviour);
-				if (halo != null) halo.enabled = true; 
+				Behaviour halo = (childTrans.GetComponent ("Halo") as Behaviour);
+				if (halo != null)
+					halo.enabled = true; 
 			}
 			//REMOVE THE FUCKING HALOS AS SOON AS THERE ARE DIFFERENT TEXTURES FOR THE MODULES
 			//!!

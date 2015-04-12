@@ -11,8 +11,8 @@ public class Stats : MonoBehaviour
 
 	public void AddToStats(Stats moduleStats)
 	{
-		speedBonus += moduleStats.speedBonus;
 		speed += moduleStats.speedBonus;
+		speedBonus += moduleStats.speedBonus;
 		damageBonus += moduleStats.damageBonus;
 		protectionBonus += moduleStats.protectionBonus;
 		HPBonus += moduleStats.HPBonus;
@@ -22,6 +22,7 @@ public class Stats : MonoBehaviour
 	public void RemoveFromStats(Stats moduleStats)
 	{
 		speed -= moduleStats.speedBonus;
+		speedBonus -= moduleStats.speedBonus;
 		damageBonus -= moduleStats.damageBonus;
 		protectionBonus -= moduleStats.protectionBonus;
 		HPBonus -= moduleStats.HPBonus;

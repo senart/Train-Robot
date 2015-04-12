@@ -17,6 +17,9 @@ public class GotoArena : MonoBehaviour {
 			sphere.center=childTrans.position;
 			Destroy(childTrans.GetComponent<BoxCollider>());
 			player.GetComponent<Rigidbody>().mass++;
+			//Solves a bug where Halo spams erros if it's enabled beforehand. Later, use different textures instead of Halos
+			Behaviour halo = (childTrans.GetComponent("Halo") as Behaviour);
+			if (halo != null) halo.enabled = false; 
 		}
 		
 		player.transform.position = new Vector3 (0, 0, 0);

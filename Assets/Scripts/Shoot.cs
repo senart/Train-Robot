@@ -26,9 +26,13 @@ public class Shoot : MonoBehaviour {
 
 	public void Fire()
 	{
-		if (Time.time > nextFire && loadedLevel) {
+		if (Time.time > nextFire && loadedLevel) { 
 			nextFire = Time.time + fireRate;
-			Instantiate (shot, shotSpawn.position,shotSpawn.rotation);
+			//Instantiate the prefab, add it as a child to the Shooter Module to get the damage data
+			//and fire it away from it's Plasma scrip
+			GameObject prefabInstance = (GameObject)Instantiate (shot, shotSpawn.position,shotSpawn.rotation);
+			prefabInstance.transform.parent=transform;
+			prefabInstance.GetComponent<Plasma>().FireAway();
 		}
 	}
 }

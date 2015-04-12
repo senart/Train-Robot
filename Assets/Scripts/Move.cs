@@ -10,16 +10,15 @@ public class Boundry
 public class Move : MonoBehaviour
 {
 	public Boundry boundry;
-	public float speed = 10;
+	public int speed;
 	public float tilt = 10;
 	public float tiltLerpSpeed = 5;
 	public float deadZone = 0.0001F;
 	public float maxVelocity = 10;
-
 	public GameObject joystickMovement;
 	public GameObject joystickRotation;
-
-	private float angle = 0;
+	
+	private float angle;
 	private UIJoyStick joyMove;
 	private UIJoyStick joyRotate;
 	private Vector3 movement;
@@ -31,6 +30,7 @@ public class Move : MonoBehaviour
 	{
 		//When the Arena Scene loads
 		if (level == 1) {
+			speed = GetComponent<Stats>().speed;
 			sqrMaxVelocity = maxVelocity * maxVelocity;
 			rigid = GetComponent<Rigidbody> ();
 			rigid.isKinematic = false;
@@ -41,6 +41,17 @@ public class Move : MonoBehaviour
 				joyMove = joystickMovement.GetComponent<UIJoyStick> ();
 				joyRotate = joystickRotation.GetComponent<UIJoyStick> ();
 			}
+
+			//!!
+			//REMOVE THE FUCKING HALOS AS SOON AS THERE ARE DIFFERENT TEXTURES FOR THE MODULES
+			//Solves a bug where Halo spams erros if it's enabled beforehand. Later, use different textures instead of Halos
+			foreach (Transform childTrans in GameObject.Find ("Player").GetComponentInChildren<Transform>()) {
+				Behaviour halo = (childTrans.GetComponent("Halo") as Behaviour);
+				if (halo != null) halo.enabled = true; 
+			}
+			//REMOVE THE FUCKING HALOS AS SOON AS THERE ARE DIFFERENT TEXTURES FOR THE MODULES
+			//!!
+
 		}
 	}
 
@@ -51,9 +62,6 @@ public class Move : MonoBehaviour
 
 			// Apply movement from move joystick
 			movement = new Vector3 (joyMove.joyStickPosX, 0.0F, joyMove.joyStickPosY);
-
-			//Keyboard movement. Uncomment this and comment out the one below for keyboard testing
-			//movement = new Vector3 (Input.GetAxis("Horizontal"), 0.0F, Input.GetAxis("Vertical"));
 			rigid.velocity = movement * speed;
 
 			//No idea what this does here...
@@ -79,9 +87,6 @@ public class Move : MonoBehaviour
 			Vector3 tiltAxis = Vector3.Cross (Vector3.up, rigid.velocity);
 			rot = Quaternion.AngleAxis (tilt, tiltAxis) * rot;
 			rigid.rotation = Quaternion.Lerp (rigid.rotation, rot, Time.deltaTime * tiltLerpSpeed);
-
-			//Works but uses momentum
-			//GetComponent<Rigidbody> ().AddTorque(transform.up*joyRotate.joyStickPosX*speed,ForceMode.VelocityChange);
 		}
 	}
 }

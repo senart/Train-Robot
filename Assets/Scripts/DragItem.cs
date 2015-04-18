@@ -12,12 +12,12 @@ public class DragItem : UIDragDropItem
 		if (surface.GetComponent<Chosen> () != null) {
 			GameObject child = NGUITools.AddChild (GameObject.Find ("Player"), prefab);
 			child.transform.localScale = surface.transform.localScale;
-
+			
 			Transform trans = child.transform;
 			float x = surface.transform.position.x;
 			float y = surface.transform.position.y;
 			float z = surface.transform.position.z;
-
+			
 			//!!!!!
 			//THIS MAKES A BUG, SOMETIMES RESETING THE NEWLY PLACED CUBE TO COORDINATES 0,0,0
 			//Maybe solved with switch statement?
@@ -38,12 +38,8 @@ public class DragItem : UIDragDropItem
 				trans.position = new Vector3 (x, y, z - 2 * offset);
 				trans.rotation = Quaternion.Euler (new Vector3 (0, 180, 0));
 			} //else {
-				//trans.position = new Vector3 (x, y + 2 * offset, z);   //BUG - this shouldn't be here
+			//trans.position = new Vector3 (x, y + 2 * offset, z);   //BUG - this shouldn't be here
 			//}
-
-			//Add the stats of this new module to the Player Stats and then spread the new Player stats to the childred
-			GameObject.Find ("Player").GetComponent<Stats>().AddToStats(child.GetComponent<ModuleStats>());
-			child.GetComponent<Chosen> ().OnClick ();
 			
 			// Destroy this NGUI drag icon as it's no longer needed
 			NGUITools.Destroy (gameObject);

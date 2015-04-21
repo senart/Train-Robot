@@ -13,8 +13,6 @@ public class ShowStats : MonoBehaviour {
 
 	public void UpdateStats()
 	{
-		if (playerStats == null)
-			return;
 		GetComponent<UILabel> ().text = "CONTRAPTION\n";
 		GetComponent<UILabel> ().text += playerStats.speed + " SPEED\n";
 		GetComponent<UILabel> ().text += playerStats.damageBonus + " DAMAGE BONUS\n";

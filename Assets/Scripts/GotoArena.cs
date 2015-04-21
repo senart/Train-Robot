@@ -27,6 +27,6 @@ public class GotoArena : MonoBehaviour {
 
 		Destroy(GameObject.FindGameObjectWithTag ("Cube Frame"));  //destroy frame
 
-		Application.LoadLevel ("control");  //Switch scenes
+		Application.LoadLevel ("control");
 	}
 }

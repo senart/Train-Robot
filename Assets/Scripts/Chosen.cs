@@ -21,58 +21,35 @@ using System.Collections;
 
 public class Chosen : MonoBehaviour
 {
-	public int ID;
-	public bool disabled;
+	MouseOrbitImproved cameraScript;
 
-	private Graph G;
-	private MouseOrbitImproved cameraScript;
-
-	void Start ()
+	void Start()
 	{
-		//Add the stats of this new module to the Player Stats 
-		//and then spread the new Player stats to the children
-
-		if (transform.parent != null) {  //BUG - parent throws null when switching scenes...
-			transform.parent.GetComponent<Stats> ().AddToStats (GetComponent<ModuleStats> ());
-			G = transform.parent.GetComponent<Graph> ();
-
-			//Add the module to the graph
-			ID = G.Count ();
-			G.AddVertex (ID, transform.position);
-		}
-
 		//Tells the rotate script to rotate around the MAIN CAMERA
 		cameraScript = Camera.main.GetComponent<MouseOrbitImproved> ();
-		OnClick ();
+		OnClick (); 
 	}
-
+	
 	//Collision detection
 	void OnTriggerEnter (Collider col)
 	{
-		if (col.gameObject.name == "Plasma(Clone)") {
-			//if the object has a parent(not already dead) apply damage
-			if (transform.parent != null && !disabled) 
-				ApplyPlasmaDamage (col);
-			Destroy (col.gameObject);  //Dispose of the colliding Plasma object
-		}
+		if (col.gameObject.name == "Plasma(Clone)") ApplyPlasmaDamage (col);
 	}
 
 	//Calcualte precisely how much to reduce the HP and whether to kill the block or not
 	void ApplyPlasmaDamage (Collider col)
 	{
-		GetComponent<ModuleStats> ().HP -= CalculatePureDamage (col.gameObject.GetComponent<Plasma> ().damage);
-		if (GetComponent<ModuleStats> ().HP < 1 && GetComponent<Rigidbody> () == null) {
-			if (G.ArticulationPoints.Contains (ID)) {  //If it's an articulation point
-				disabled = true;
-				SwitchOffThisModule();  //Remove stats and turn lights off
-				//TODO: CHANGE APPEARENCE 
-			} else {
+		//if the object has a parent(not already dead) then apply damage
+		if (transform.parent != null) {
+			GetComponent<ModuleStats> ().HP -= CalculatePureDamage(col.gameObject.GetComponent<Plasma> ().damage);
+			if (GetComponent<ModuleStats> ().HP < 1 && GetComponent<Rigidbody> () == null) {
 				DestroyThisModule ();
 			}
 		}
+		Destroy (col.gameObject);  //Dispose of the colliding object
 	}
 
-	float CalculatePureDamage (int damage)
+	float CalculatePureDamage(int damage)
 	{
 		float dam = damage * (100F / (100F + GetComponent<ModuleStats> ().protection));
 		return dam;
@@ -81,7 +58,7 @@ public class Chosen : MonoBehaviour
 	//Safely destroy this module, by removing its stats and Sphere Collider from the parent Player,
 	// disabling its light, making it parentless, adding a rigidbody for collision,
 	// removing 1 from the Player mass and making its collider non-trigger
-	public void DestroyThisModule ()
+	void DestroyThisModule ()
 	{
 		//TODO: Spring cube out
 		Vector3 spherePos = transform.localPosition;
@@ -90,29 +67,18 @@ public class Chosen : MonoBehaviour
 				Destroy (sphereCol);
 		}
 
-		SwitchOffThisModule ();
+		RemoveStats ();
+		gameObject.GetComponent<Light> ().enabled = false;
 		transform.parent.GetComponent<Rigidbody> ().mass--;
 		transform.parent = null;
 		gameObject.AddComponent<Rigidbody> ().drag = 1;
 		gameObject.GetComponent<SphereCollider> ().isTrigger = false;
-
-		//Remove it from the Graph and find other connected and disabled modules
-		G.RemoveVertex (ID);
-		foreach (Transform module in GameObject.Find("Player").GetComponentInChildren<Transform>()) {
-			Chosen ch = module.GetComponent<Chosen> ();
-			if (ch.disabled && !G.ArticulationPoints.Contains (ch.ID)) {
-				ch.DestroyThisModule ();
-			}
-		}
 	}
 
-	//Removes the effects this module brings to stats (and turns the light off)
-	void SwitchOffThisModule ()
+	//Removes the effects this module brings to the all-stats
+	void RemoveStats()
 	{
-		//Remove bonus from statistics
-		transform.parent.GetComponent<Stats> ().RemoveFromStats (gameObject.GetComponent<ModuleStats> ());
-		//Remove visuals
-		gameObject.GetComponent<Light> ().enabled = false;
+		transform.parent.GetComponent<Stats>().RemoveFromStats(gameObject.GetComponent<ModuleStats>());
 	}
 
 	void OnDrag ()
@@ -133,14 +99,10 @@ public class Chosen : MonoBehaviour
 	//Also moves the frame around it to the Main Module
 	public void OnDoubleClick ()
 	{
-		//If this module is not an articulation point (cut-vertex) to the robot
-		if (!G.ArticulationPoints.Contains (ID)) {
-			GameObject.Find ("Main Module").GetComponent<Chosen> ().OnClick ();
-			if (gameObject.name != "Main Module") {
-				SwitchOffThisModule();
-				G.RemoveVertex (ID);
-				Destroy (gameObject);
-			}
+		GameObject.Find ("Main Module").GetComponent<Chosen> ().OnClick ();
+		if (gameObject.name != "Main Module") {
+			RemoveStats();
+			Destroy (gameObject);
 		}
 	}
 	

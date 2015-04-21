@@ -9,6 +9,7 @@ public class DragItem : UIDragDropItem
 
 	protected override void OnDragDropRelease (GameObject surface)
 	{
+		//If it is a module...
 		if (surface.GetComponent<Chosen> () != null) {
 			GameObject child = NGUITools.AddChild (GameObject.Find ("Player"), prefab);
 			child.transform.localScale = surface.transform.localScale;

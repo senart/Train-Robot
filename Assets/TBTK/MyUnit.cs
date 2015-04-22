@@ -30,18 +30,18 @@ class MyUnit : MonoBehaviour
 		tile = grid [0, 0];
 		transform.position = tile.GetPos ();
 
-		Variable va = new Variable ();
-		va.OnClick ();
-		MoveCommand mov = new MoveCommand (0);
-		mov.SetVariable (va);
-		IfCommand test = new IfCommand (1);
-		test.condition = true;
-		test.OnCommandsDrop (mov);
-		List<Command> cmds = new List<Command> ();
-		cmds.Add (test);
-		foreach (Command cmd in cmds) {
-			cmd.Execute();
-		}
+//		Variable va = new Variable ();
+//		va.OnClick ();
+//		MoveCommand mov = new MoveCommand (0);
+//		mov.SetVariable (va);
+//		IfCommand test = new IfCommand (1);
+//		test.condition = true;
+//		test.OnCommandsDrop (mov);
+//		List<Command> cmds = new List<Command> ();
+//		cmds.Add (test);
+//		foreach (Command cmd in cmds) {
+//			cmd.Execute();
+//		}
 	}
 
 	public int MovePlayerForward (int tilesToGo)

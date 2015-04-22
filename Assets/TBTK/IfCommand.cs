@@ -1,30 +1,33 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
 public class IfCommand : Command 
 {
+	public Variable startingVariable;
+
 	public bool condition= false;
-	public Dictionary<int, Command> coms;
+	public List<Command> coms;
 
-	public IfCommand(int ID) : base(ID)
+	void Start()
 	{
-		coms = new Dictionary<int, Command> ();
+		myVar = startingVariable;
 	}
 
-	public void SetVariable (Variable dropped)
+	private void UpdateCommands()
 	{
-		condition=dropped.GetConditionData();
-	}
-
-	public void OnCommandsDrop(Command com)
-	{
-		coms.Add(com.GetID(), com);
+		coms = new List<Command> ();
+		foreach(Transform child in transform.Find("Commands").GetComponentInChildren<Transform>()){
+			if(child.GetComponent<Command>()){
+				coms.Add(child.GetComponent<Command>());
+			}
+		}
 	}
 
 	public override void Execute()
 	{
-		if(condition) {
+		UpdateCommands ();
+		if(myVar.GetBoolData()) {
 			for(int i =0; i < coms.Count;i++){
 				coms[i].Execute();
 			}
@@ -33,7 +36,7 @@ public class IfCommand : Command
 
 	protected override void RemoveFromCommands(int ID)
 	{
-		coms.Remove (ID);
+		//coms.Remove (ID);
 	}
 
 }

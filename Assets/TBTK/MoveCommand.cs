@@ -5,11 +5,6 @@ public class MoveCommand : Command
 {
 	private int numTiles;
 
-	public MoveCommand(int ID) : base(ID)
-	{
-		numTiles = 0;
-	}
-
 	public void SetVariable(Variable dropped)
 	{
 		numTiles = dropped.GetData ();

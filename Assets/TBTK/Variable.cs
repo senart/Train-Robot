@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Variable : MonoBehaviour {
+public class Variable : Command {
 	private int data;
 	private bool condition;
 
@@ -17,7 +17,9 @@ public class Variable : MonoBehaviour {
 	}
 
 	public void OnClick(){
-		data = 17;
+		data = 5;
+		condition = true;
+
 		//Display textbox for number input, select Left,Right from list (Left = -90, Right = 90)….
 		// set condition to true...
 	}

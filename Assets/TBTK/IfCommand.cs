@@ -5,21 +5,16 @@ using System.Collections.Generic;
 public class IfCommand : Command 
 {
 	public bool condition= false;
-	public Dictionary<int, Command> coms;
+	public List<Command> coms;
 
-	public IfCommand(int ID) : base(ID)
+	protected override void SetVariable (GameObject dropped)
 	{
-		coms = new Dictionary<int, Command> ();
-	}
-
-	public void SetVariable (Variable dropped)
-	{
-		condition=dropped.GetConditionData();
+		condition = dropped.GetComponent<Variable>().GetConditionData();
 	}
 
 	public void OnCommandsDrop(Command com)
 	{
-		coms.Add(com.GetID(), com);
+		//coms.Add(com.GetID(), com);
 	}
 
 	public override void Execute()
@@ -33,7 +28,7 @@ public class IfCommand : Command
 
 	protected override void RemoveFromCommands(int ID)
 	{
-		coms.Remove (ID);
+		//coms.Remove (ID);
 	}
 
 }

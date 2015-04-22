@@ -1,9 +1,15 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Command : UIDragDropItem {
 
 	private bool secondDrag = false;
+	protected Variable myVar;
+
+	protected override void OnDragDropMove (Vector2 delta)
+	{
+		mTrans.localPosition += (Vector3)delta;
+	}
 
 	protected override void OnDragDropRelease (GameObject surface)
 	{
@@ -23,15 +29,6 @@ public class Command : UIDragDropItem {
 			
 			if (container != null)
 			{
-				if(gameObject.GetType().ToString() == "Variable") {
-					if(container.GetComponent<IfCommand>() != null){
-						mTrans.parent = container.transform;
-						mTrans.position = container.transform.position;
-						SetVariable(gameObject);
-						Destroy(surface);
-					}
-				}
-
 				// Container found -- parent this object to the container
 				mTrans.parent = (container.reparentTarget != null) ? container.reparentTarget : container.transform;
 				
@@ -73,16 +70,12 @@ public class Command : UIDragDropItem {
 		//Nothing
 	}
 
-	protected virtual void MyOnDrag(){
-		//if (transform.parent != null)
-			//transform.parent.GetComponent<Command>().RemoveFromCommands (ID);
+	public void SetVariable (Variable dropped)
+	{
+		myVar = dropped;
 	}
 
 	protected virtual void RemoveFromCommands (int ID){
 		//Nothing
-	}
-
-	protected virtual void SetVariable(GameObject dropped){
-		//do nothing
 	}
 }

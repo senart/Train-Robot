@@ -1,25 +1,33 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
 public class IfCommand : Command 
 {
+	public Variable startingVariable;
+
 	public bool condition= false;
 	public List<Command> coms;
 
-	protected override void SetVariable (GameObject dropped)
+	void Start()
 	{
-		condition = dropped.GetComponent<Variable>().GetConditionData();
+		myVar = startingVariable;
 	}
 
-	public void OnCommandsDrop(Command com)
+	private void UpdateCommands()
 	{
-		//coms.Add(com.GetID(), com);
+		coms = new List<Command> ();
+		foreach(Transform child in transform.Find("Commands").GetComponentInChildren<Transform>()){
+			if(child.GetComponent<Command>()){
+				coms.Add(child.GetComponent<Command>());
+			}
+		}
 	}
 
 	public override void Execute()
 	{
-		if(condition) {
+		UpdateCommands ();
+		if(myVar.GetBoolData()) {
 			for(int i =0; i < coms.Count;i++){
 				coms[i].Execute();
 			}

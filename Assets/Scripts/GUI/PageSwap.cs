@@ -22,11 +22,16 @@ public class PageSwap : MonoBehaviour {
 	}
 
 	public void Show () {
-		current = current % pages.Length;
+		current = mod (current, pages.Length);
 		foreach (GameObject page in pages) {
 			page.SetActive(false);
 		}
 		if (pages.Length==0) return;
 		pages[current].SetActive(true);
+	}
+
+	int mod(int x, int m) {
+		int r = x%m;
+		return r<0 ? r+m : r;
 	}
 }

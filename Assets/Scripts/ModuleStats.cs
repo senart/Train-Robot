@@ -8,7 +8,7 @@ public class ModuleStats : Stats {
 	public int startingHP;
 	public int startingProtection;
 
-	public string moduleName;
+	public string moduleName, moduleDescription;
 	public int damage;
 	public int protection;
 	public float HP;

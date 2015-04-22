@@ -32,8 +32,11 @@ public class Stats : MonoBehaviour
 	private void UpdateAllStats()
 	{
 		GameObject.FindObjectOfType<ShowStats> ().UpdateStats ();  //Update the label that is diplaying the stats
-		foreach (Transform child in transform.GetComponentInChildren<Transform>()) {
+		/*foreach (Transform child in transform.GetComponentInChildren<Transform>()) {
 			child.GetComponent<ModuleStats>().UpdateBonusStats(speedBonus, damageBonus,  protectionBonus,  HPBonus);
+		}*/
+		foreach (ModuleStats stats in GetComponentsInChildren<ModuleStats>()) {
+			stats.UpdateBonusStats(speedBonus, damageBonus, protectionBonus, HPBonus);
 		}
 	}
 }

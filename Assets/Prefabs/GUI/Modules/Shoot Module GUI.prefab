@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 496720}
   - 33: {fileID: 3325578}
   - 23: {fileID: 2381376}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MiddleFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 439932}
   - 33: {fileID: 3382654}
   - 23: {fileID: 2336160}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: FrontSemisphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - 4: {fileID: 436516}
   - 33: {fileID: 3348256}
   - 23: {fileID: 2395348}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Tube001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   - 4: {fileID: 446688}
   - 33: {fileID: 3369884}
   - 23: {fileID: 2340136}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MiddleBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - 4: {fileID: 493658}
   - 33: {fileID: 3302064}
   - 23: {fileID: 2312388}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Tube002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 416006}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ShotSpawn 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - 4: {fileID: 420744}
   - 33: {fileID: 3391772}
   - 23: {fileID: 2390434}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - 4: {fileID: 410734}
   - 33: {fileID: 3346098}
   - 23: {fileID: 2376314}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   - 4: {fileID: 471042}
   - 33: {fileID: 3384764}
   - 23: {fileID: 2327134}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Blaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   - 4: {fileID: 490620}
   - 95: {fileID: 9556816}
   - 114: {fileID: 11474292}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ShooterMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,13 +176,12 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 436688}
-  - 114: {fileID: 11450242}
   - 65: {fileID: 6519960}
   - 114: {fileID: 11416712}
   - 108: {fileID: 10879314}
   - 114: {fileID: 11469978}
-  m_Layer: 0
-  m_Name: Shoot Module
+  m_Layer: 5
+  m_Name: Shoot Module GUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,7 +197,7 @@ GameObject:
   - 4: {fileID: 495502}
   - 33: {fileID: 3301246}
   - 23: {fileID: 2339470}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Tube003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +260,7 @@ Transform:
   m_GameObject: {fileID: 186892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 80, y: 80, z: 80}
   m_Children:
   - {fileID: 416006}
   - {fileID: 490620}
@@ -715,19 +714,6 @@ MonoBehaviour:
   shotSpawn: {fileID: 416006}
   fireRate: .25
   shootNonStop: 0
---- !u!114 &11450242
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 353d8d45be2c20343a9ab06549d1ecde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: 0
-  disabled: 0
 --- !u!114 &11469978
 MonoBehaviour:
   m_ObjectHideFlags: 1

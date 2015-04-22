@@ -4,15 +4,13 @@ using System.Collections;
 public class BlockInfo : MonoBehaviour {
 
 	public Vector3 rotation;
+	public ModuleStats stats;
+	public ModuleDescriptionLabels labels;
 	public GameObject currentModule;
 
-	ModuleDescriptionLabels labels;
-	ModuleStats stats;
 	void Start() {
 		currentModule.AddComponent(typeof(Rotate));
 		currentModule.GetComponent<Rotate>().rotation = this.rotation;
-		labels = GetComponentInChildren<ModuleDescriptionLabels>();
-		stats = currentModule.GetComponent<ModuleStats>();
 		SetLabels();
 	}
 

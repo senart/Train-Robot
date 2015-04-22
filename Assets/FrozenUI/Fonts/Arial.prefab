@@ -42,10 +42,10 @@ MonoBehaviour:
   mMat: {fileID: 2100000, guid: 1813964cc44354647909f5349aba7f60, type: 2}
   mUVRect:
     serializedVersion: 2
-    x: .370605469
-    y: .588867188
+    x: 0
+    y: .625488281
     width: .0625
-    height: .125
+    height: .0625
   mFont:
     mSize: 16
     mBase: 0

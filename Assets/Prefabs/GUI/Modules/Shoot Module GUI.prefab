@@ -727,15 +727,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   speedBonus: 0
-  damageBonus: 0
+  damageBonus: 100
   protectionBonus: 0
   HPBonus: 0
   startingSpeed: 0
   startingDamage: 10
   startingHP: 500
   startingProtection: 0
-  moduleName: 
-  moduleDescription: 
+  moduleName: Long Range Shooter
+  moduleDescription: Awesome and deadly.
   damage: 0
   protection: 0
   HP: 0
@@ -759,7 +759,7 @@ MonoBehaviour:
   backR: {fileID: 446688}
   frontR: {fileID: 496720}
   key: 323
-  canShoot: 1
+  canShoot: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

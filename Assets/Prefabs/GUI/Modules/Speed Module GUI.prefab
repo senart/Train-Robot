@@ -1,45 +1,43 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &139722
+--- !u!1 &129514
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 497528}
-  - 33: {fileID: 3333552}
-  - 23: {fileID: 2315076}
-  - 114: {fileID: 11440918}
-  - 65: {fileID: 6570010}
-  - 108: {fileID: 10885332}
-  - 114: {fileID: 11434058}
-  - 122: {fileID: 12247242}
-  m_Layer: 0
-  m_Name: Speed Module
+  - 4: {fileID: 402074}
+  - 33: {fileID: 3337090}
+  - 23: {fileID: 2338072}
+  - 65: {fileID: 6595696}
+  - 108: {fileID: 10855246}
+  - 114: {fileID: 11443028}
+  m_Layer: 5
+  m_Name: Speed Module GUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &497528
+--- !u!4 &402074
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 139722}
+  m_GameObject: {fileID: 129514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 70, y: 70, z: 70}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &2315076
+--- !u!23 &2338072
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 139722}
+  m_GameObject: {fileID: 129514}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -58,31 +56,31 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &3333552
+--- !u!33 &3337090
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 139722}
+  m_GameObject: {fileID: 129514}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &6570010
+--- !u!65 &6595696
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 139722}
+  m_GameObject: {fileID: 129514}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!108 &10885332
+--- !u!108 &10855246
 Light:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 139722}
+  m_GameObject: {fileID: 129514}
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 2
@@ -109,19 +107,19 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!114 &11434058
+--- !u!114 &11443028
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 139722}
+  m_GameObject: {fileID: 129514}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f9a261aef5e85443a9252e6398ce68a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  speedBonus: 1
+  speedBonus: 5
   damageBonus: 0
   protectionBonus: 0
   HPBonus: 0
@@ -130,33 +128,10 @@ MonoBehaviour:
   startingHP: 500
   startingProtection: 0
   moduleName: Speed Module
+  moduleDescription: Fast and furious. Just like your robot when it has one.
   damage: 0
   protection: 0
   HP: 0
---- !u!114 &11440918
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 139722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 353d8d45be2c20343a9ab06549d1ecde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: 0
-  disabled: 0
---- !u!122 &12247242
-Halo:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 139722}
-  m_Enabled: 1
-  m_Color:
-    serializedVersion: 2
-    rgba: 4280208908
-  m_Size: .800000012
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -166,5 +141,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 139722}
+  m_RootGameObject: {fileID: 129514}
   m_IsPrefabParent: 1

@@ -112,7 +112,7 @@ public class Chosen : MonoBehaviour
 		//Remove bonus from statistics
 		transform.parent.GetComponent<Stats> ().RemoveFromStats (gameObject.GetComponent<ModuleStats> ());
 		//Remove visuals
-		gameObject.GetComponent<Light> ().enabled = false;
+		//gameObject.GetComponent<Light> ().enabled = false;
 	}
 
 	void OnDrag ()

@@ -13,7 +13,7 @@ class MyUnit : MonoBehaviour
 	MyTile targetTile;
 	MyTile[,] grid;
 
-	void Start ()
+	void Awake ()
 	{
 		grid = new MyTile[columns, rows];
 		//Populate the MyTile grid and index each tile with col and row numbers
@@ -27,7 +27,7 @@ class MyUnit : MonoBehaviour
 			grid [column, row] = mt;
 			i++;
 		}
-		tile = grid [0, 0];
+		tile = grid [3, 3];
 		transform.position = tile.GetPos ();
 
 //		Variable va = new Variable ();
@@ -96,14 +96,14 @@ class MyUnit : MonoBehaviour
 
 	void Update ()
 	{
-		if (Input.GetKeyDown (KeyCode.UpArrow)) {
-			int spareTiles = MovePlayerForward (1);
-		}
-		if (Input.GetKeyDown (KeyCode.RightArrow)) {
-			RotatePlayer(90);
-		}
-		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
-			RotatePlayer(-90);
-		}
+//		if (Input.GetKeyDown (KeyCode.UpArrow)) {
+//			int spareTiles = MovePlayerForward (1);
+//		}
+//		if (Input.GetKeyDown (KeyCode.RightArrow)) {
+//			RotatePlayer(90);
+//		}
+//		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
+//			RotatePlayer(-90);
+//		}
 	}
 }

@@ -4,17 +4,10 @@ using System.Collections.Generic;
 
 public class IfCommand : Command 
 {
-	public Variable startingVariable;
-
-	public bool condition= false;
+	public bool condition;
 	public List<Command> coms;
 
-	void Start()
-	{
-		myVar = startingVariable;
-	}
-
-	private void UpdateCommands()
+	public override void UpdateCommands()
 	{
 		coms = new List<Command> ();
 		foreach(Transform child in transform.Find("Commands").GetComponentInChildren<Transform>()){
@@ -33,10 +26,4 @@ public class IfCommand : Command
 			}
 		}
 	}
-
-	protected override void RemoveFromCommands(int ID)
-	{
-		//coms.Remove (ID);
-	}
-
 }

@@ -105,13 +105,8 @@ public class Move : MonoBehaviour
 			//!!
 		}
 
-		if (level == 2) {
-			//This adds the Programming Scene Player Controls
-			transform.gameObject.AddComponent<MyUnit> ();
-		}
-
 		//For Augmented Reality
-		if (level == 3) {
+		if (level == 4) {
 			transform.parent = GameObject.Find("ImageTarget").transform;
 			transform.localScale = new Vector3(1,1,1);
 		}

@@ -1,22 +1,24 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
 public class RobotBrain : MonoBehaviour {
 
-	private List<Command> coms;
+	public List<Command> coms;
 
-	public void GoToProgram()
+	public void SetCommands(List<Command> coms)
 	{
-		coms = new List<Command> ();
-		foreach (Transform child in GameObject.Find ("Container").GetComponentInChildren<Transform>()) {
-			if(child.GetComponent<Command>()){
-				coms.Add(child.GetComponent<Command>());
-			}
-		}
-		ExecuteAllComs ();
+		this.coms = coms;
 	}
 
+	void OnLevelWasLoaded(int level)
+	{
+		if (level == 3) {
+			gameObject.AddComponent<MyUnit> ();
+			ExecuteAllComs ();
+		}
+	}
+	
 	void ExecuteAllComs()
 	{
 		for (int i = 0; i < coms.Count; i++)

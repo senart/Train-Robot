@@ -6,8 +6,9 @@ public class TurnCommand : Command
 	private int degrees;
 
 	public override void Execute(){
+		degrees = myVar.GetData ();
 		Debug.Log ("Rotate!");
-		//Rotate Player (degrees);
+		GameObject.Find ("Player").GetComponent<MyUnit> ().RotatePlayer(degrees);
 	}
 
 }

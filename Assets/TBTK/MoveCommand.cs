@@ -7,7 +7,8 @@ public class MoveCommand : Command
 
 	public override void Execute()
 	{
+		numTiles = myVar.GetData ();
 		Debug.Log ("Move!");
-		//GameObject.Find ("Player").GetComponent<MyUnit> ().MovePlayerForward (numTiles);
+		GameObject.Find ("Player").GetComponent<MyUnit> ().MovePlayerForward (numTiles);
 	}
 }

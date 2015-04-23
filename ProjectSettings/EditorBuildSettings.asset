@@ -15,3 +15,5 @@ EditorBuildSettings:
     path: Assets/Scenes/AR.unity
   - enabled: 1
     path: Assets/Scenes/NetworkScene.unity
+  - enabled: 1
+    path: Assets/Scenes/build.unity

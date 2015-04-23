@@ -19,8 +19,8 @@ public class MouseOrbitImproved : MonoBehaviour
 	float y = 0.0f;
 	Quaternion rotation;
 	Vector3 position;
-	float xSpeed = Screen.width / 8;
-	float ySpeed = Screen.height / 8;
+	public float xSpeed = Screen.width / 8;
+	public float ySpeed = Screen.height / 8;
 
 	// Use this for initialization
 	void Start ()

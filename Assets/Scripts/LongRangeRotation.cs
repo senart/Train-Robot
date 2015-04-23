@@ -6,7 +6,7 @@ public class LongRangeRotation : MonoBehaviour {
 	public Vector3 backSpeed, frontSpeed, backRSpeed, frontRSpeed;
 	public Transform back, front, backR, frontR;
 	public KeyCode key;
-	public bool canShoot;
+	public bool canShoot, hasToShoot;
 	float multiplier = 0;
 	bool on;
 
@@ -28,7 +28,7 @@ public class LongRangeRotation : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		if (on&&canShoot){
+		if (on&&canShoot || hasToShoot){
 			multiplier = Mathf.Lerp(multiplier, 10f, 0.04f);
 		}else {
 			multiplier = Mathf.Lerp(multiplier, 0, 0.05f);

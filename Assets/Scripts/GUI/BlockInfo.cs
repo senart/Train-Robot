@@ -9,8 +9,6 @@ public class BlockInfo : MonoBehaviour {
 	public GameObject currentModule;
 
 	void Start() {
-		currentModule.AddComponent(typeof(Rotate));
-		currentModule.GetComponent<Rotate>().rotation = this.rotation;
 		SetLabels();
 	}
 

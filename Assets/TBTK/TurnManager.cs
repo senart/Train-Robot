@@ -11,19 +11,19 @@ public class TurnManager : MonoBehaviour {
 	private static TurnManager instance;
 	private static List<RobotBrain> players;
 
-	public static void AddPlayer(RobotBrain player)
-	{
-		players.Add (player);
-	}
-
-	public static void NextUnit(){
-		//end this turn
-	}
-
-	public static void EndTurn()
-	{
-
-	}
+//	public static void AddPlayer(RobotBrain player)
+//	{
+//		players.Add (player);
+//	}
+//
+//	public static void NextUnit(){
+//		//end this turn
+//	}
+//
+//	public static void EndTurn()
+//	{
+//
+//	}
 
 	//called by all to check if a new action can take place (shoot, move, ability, etc)
 	public static bool ClearToProceed(){

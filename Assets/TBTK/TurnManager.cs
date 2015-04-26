@@ -10,20 +10,23 @@ public class TurnManager : MonoBehaviour {
 
 	private static TurnManager instance;
 	private static List<RobotBrain> players;
+	private static int playerIndex;
 
-//	public static void AddPlayer(RobotBrain player)
-//	{
-//		players.Add (player);
-//	}
-//
-//	public static void NextUnit(){
-//		//end this turn
-//	}
-//
-//	public static void EndTurn()
-//	{
-//
-//	}
+	public static void AddPlayer(RobotBrain player)
+	{
+		players.Add (player);
+	}
+
+	public static void NextUnit()
+	{
+		if (playerIndex++ >= players.Count) playerIndex = 0;
+		players [playerIndex].ExecuteAllComs (); //Do the other players commands
+	}
+
+	public static void StartTurns()
+	{
+		if(players.Count > 1) players [playerIndex].ExecuteAllComs ();
+	}
 
 	//called by all to check if a new action can take place (shoot, move, ability, etc)
 	public static bool ClearToProceed(){

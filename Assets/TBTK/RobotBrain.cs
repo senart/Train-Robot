@@ -13,7 +13,8 @@ public class RobotBrain : MonoBehaviour
 	int columns = 14;
 	int rowMod =0;
 	int colMod = 1;
-	
+
+	public MyTile startingTile;
 	MyTile tile;
 	MyTile targetTile;
 	MyTile[,] grid;
@@ -28,7 +29,7 @@ public class RobotBrain : MonoBehaviour
 	void OnLevelWasLoaded(int level)
 	{
 		if (level == 2) {
-			//TurnManager.AddPlayer(this);  //Implement ASAP
+			TurnManager.AddPlayer(this);  //Implement ASAP
 			grid = new MyTile[columns, rows];
 			//Populate the MyTile grid and index each tile with col and row numbers
 			int i = 0;
@@ -41,9 +42,9 @@ public class RobotBrain : MonoBehaviour
 				grid [column, row] = mt;
 				i++;
 			}
-			tile = grid [3, 3];  //starting tile
+			tile = startingTile;
 			transform.position = tile.GetPos ();
-			ExecuteAllComs();
+			TurnManager.StartTurns();
 		}
 	}
 
@@ -57,7 +58,7 @@ public class RobotBrain : MonoBehaviour
 		}
 	}
 
-	void ExecuteAllComs()
+	public void ExecuteAllComs()
 	{
 		for (int i = 0; i < coms.Count; i++)
 		{
@@ -103,6 +104,8 @@ public class RobotBrain : MonoBehaviour
 		}
 		TurnManager.ActionCompleted();
 		//return tilesToGo;
+		if (TurnManager.ClearToProceed ())
+			TurnManager.NextUnit ();
 	}
 
 	public void RotatePlayer(int degrees)
@@ -153,5 +156,7 @@ public class RobotBrain : MonoBehaviour
 			yield return null;
 		}
 		TurnManager.ActionCompleted();
+		if (TurnManager.ClearToProceed ())
+			TurnManager.NextUnit ();
 	}
 }

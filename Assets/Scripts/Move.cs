@@ -24,13 +24,13 @@ public class Move : MonoBehaviour
 	private Vector3 velocity;
 	private Rigidbody rigid;
 	private float sqrMaxVelocity;
-	public float mspeed = 10f;	
+
 	private float lastSynchronizationTime = 0f;
 	private float syncDelay = 0f;
 	private float syncTime = 0f;
 	private Vector3 syncStartPosition = Vector3.zero;
 	private Vector3 syncEndPosition = Vector3.zero;
-
+	
 	void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
 	{
 		Vector3 syncPosition = Vector3.zero;
@@ -56,7 +56,7 @@ public class Move : MonoBehaviour
 			syncStartPosition = GetComponent<Rigidbody>().position;
 		}
 	}
-
+	
 	void Awake()
 	{
 		lastSynchronizationTime = Time.time;
@@ -66,15 +66,51 @@ public class Move : MonoBehaviour
 	{
 		if (GetComponent<NetworkView>().isMine)
 		{
+			InputMovement();
+			InputColorChange();
+		}
+		else
+		{
 			SyncedMovement();
 		}
 	}
-
+	
+	
+	private void InputMovement()
+	{
+		if (Input.GetKey(KeyCode.W))
+			GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position + Vector3.forward * speed * Time.deltaTime);
+		
+		if (Input.GetKey(KeyCode.S))
+			GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position - Vector3.forward * speed * Time.deltaTime);
+		
+		if (Input.GetKey(KeyCode.D))
+			GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position + Vector3.right * speed * Time.deltaTime);
+		
+		if (Input.GetKey(KeyCode.A))
+			GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position - Vector3.right * speed * Time.deltaTime);
+	}
+	
 	private void SyncedMovement()
 	{
 		syncTime += Time.deltaTime;
 		
 		GetComponent<Rigidbody>().position = Vector3.Lerp(syncStartPosition, syncEndPosition, syncTime / syncDelay);
+	}
+	
+	
+	private void InputColorChange()
+	{
+		if (Input.GetKeyDown(KeyCode.R))
+			ChangeColorTo(new Vector3(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f)));
+	}
+	
+	[RPC] void ChangeColorTo(Vector3 color)
+	{
+		GetComponent<Renderer>().material.color = new Color(color.x, color.y, color.z, 1f);
+		
+		if (GetComponent<NetworkView>().isMine)
+			GetComponent<NetworkView>().RPC("ChangeColorTo", RPCMode.OthersBuffered, color);
 	}
 
 	void OnLevelWasLoaded (int level)
@@ -105,45 +141,46 @@ public class Move : MonoBehaviour
 			//!!
 		}
 
-		//For Augmented Reality
-		if (level == 4) {
-			transform.parent = GameObject.Find("ImageTarget").transform;
-			transform.localScale = new Vector3(1,1,1);
-		}
+//		//For Augmented Reality
+//		if (level == 4) {
+//			transform.parent = GameObject.Find("ImageTarget").transform;
+//			transform.localScale = new Vector3(1,1,1);
+//		}
 	}
 
-	void FixedUpdate ()
-	{
-		//If we can assign the joysticks correctly
-		if (joyMove != null && joyRotate != null) {
 
-			// Apply movement from move joystick
-			movement = new Vector3 (joyMove.joyStickPosX, 0.0F, joyMove.joyStickPosY);
-			rigid.velocity = movement * speed;
-
-			//No idea what this does here...
-			if (rigid.velocity.sqrMagnitude > sqrMaxVelocity) {
-				rigid.velocity = rigid.velocity.normalized * maxVelocity;
-			}
-
-			//Boundries of the playfield
-			rigid.position = new Vector3
-							(
-								Mathf.Clamp (rigid.position.x, boundry.xMin, boundry.xMax),
-								0.0F,
-								Mathf.Clamp (rigid.position.z, boundry.zMin, boundry.zMax)
-			);
-
-			//Dead zone callibration, in order to not have 0 rotation
-			if ((Mathf.Abs (joyRotate.joyStickPosX) > deadZone && Mathf.Abs (joyRotate.joyStickPosY) > deadZone)) {
-				angle = Mathf.Atan2 (-joyRotate.joyStickPosX, -joyRotate.joyStickPosY) * Mathf.Rad2Deg;
-			}
-
-			//Actual rotation
-			Quaternion rot = Quaternion.Euler (0, angle, 0);
-			Vector3 tiltAxis = Vector3.Cross (Vector3.up, rigid.velocity);
-			rot = Quaternion.AngleAxis (tilt, tiltAxis) * rot;
-			rigid.rotation = Quaternion.Lerp (rigid.rotation, rot, Time.deltaTime * tiltLerpSpeed);
-		}
-	}
+//	void FixedUpdate ()
+//	{
+//		//If we can assign the joysticks correctly
+//		if (joyMove != null && joyRotate != null) {
+//			
+//			// Apply movement from move joystick
+//			movement = new Vector3 (joyMove.joyStickPosX, 0.0F, joyMove.joyStickPosY);
+//			rigid.velocity = movement * speed;
+//			
+//			//No idea what this does here...
+//			if (rigid.velocity.sqrMagnitude > sqrMaxVelocity) {
+//				rigid.velocity = rigid.velocity.normalized * maxVelocity;
+//			}
+//			
+//			//Boundries of the playfield
+//			rigid.position = new Vector3
+//				(
+//					Mathf.Clamp (rigid.position.x, boundry.xMin, boundry.xMax),
+//					0.0F,
+//					Mathf.Clamp (rigid.position.z, boundry.zMin, boundry.zMax)
+//					);
+//			
+//			//Dead zone callibration, in order to not have 0 rotation
+//			if ((Mathf.Abs (joyRotate.joyStickPosX) > deadZone && Mathf.Abs (joyRotate.joyStickPosY) > deadZone)) {
+//				angle = Mathf.Atan2 (-joyRotate.joyStickPosX, -joyRotate.joyStickPosY) * Mathf.Rad2Deg;
+//			}
+//			
+//			//Actual rotation
+//			Quaternion rot = Quaternion.Euler (0, angle, 0);
+//			Vector3 tiltAxis = Vector3.Cross (Vector3.up, rigid.velocity);
+//			rot = Quaternion.AngleAxis (tilt, tiltAxis) * rot;
+//			rigid.rotation = Quaternion.Lerp (rigid.rotation, rot, Time.deltaTime * tiltLerpSpeed);
+//		}
+//	}
 }

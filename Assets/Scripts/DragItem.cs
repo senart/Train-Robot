@@ -10,7 +10,6 @@ public class DragItem : UIDragDropItem
 
 	protected override void OnDragDropRelease (GameObject surface)
 	{
-		Debug.Log(surface);
 		if (prefab.GetComponent<Chosen> () != null) {
 			int layerMask = LayerMask.NameToLayer("Default");
 			RaycastHit hit;
@@ -21,7 +20,6 @@ public class DragItem : UIDragDropItem
 				float x = targetTransform.x;
 				float y = targetTransform.y;
 				float z = targetTransform.z;
-				Debug.Log(worldPosition);
 				GameObject child = NGUITools.AddChild (GameObject.Find ("Player"), prefab);
 				//child.transform.localScale = surface.transform.localScale;
 				child.transform.localScale = Vector3.one;

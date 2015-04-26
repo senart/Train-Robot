@@ -3,11 +3,10 @@ using System.Collections;
 
 public class GotoArena : MonoBehaviour {
 
-	public GameObject prefab;
-
 	void OnClick ()
 	{
+		Destroy(GameObject.Find("Cube Frame"));
 		DontDestroyOnLoad (GameObject.Find("Player"));
-		Application.LoadLevel ("NetworkScene");  //Switch scenes
+		Application.LoadLevel ("control");  //Switch scenes
 	}
 }

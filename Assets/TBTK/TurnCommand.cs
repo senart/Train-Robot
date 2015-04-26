@@ -5,10 +5,9 @@ public class TurnCommand : Command
 {
 	private int degrees;
 
-	public override void Execute(){
+	public override void Execute(RobotBrain playerBrain){
 		degrees = myVar.GetData ();
 		Debug.Log ("Rotate!");
-		GameObject.Find ("Player").GetComponent<MyUnit> ().RotatePlayer(degrees);
+		playerBrain.RotatePlayer(degrees);
 	}
-
 }

@@ -5,7 +5,7 @@ public class Command : ProgramDropItem {
 	
 	public Variable myVar;
 
-	public virtual void Execute(){
+	public virtual void Execute(RobotBrain playerBrain){
 		//Nothing
 	}
 

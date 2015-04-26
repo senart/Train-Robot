@@ -7,11 +7,11 @@ public class Resolution : MonoBehaviour {
 	private UILabel lbl;
 	void Start () {
 		lbl = GetComponent<UILabel>();
-		lbl.text = "Screen Resolution:   "+Screen.width+" x "+Screen.height;
+		lbl.text = Screen.width+" x "+Screen.height;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		lbl.text = "Screen Resolution:   "+Screen.width+" x "+Screen.height;
+		lbl.text = Screen.width+" x "+Screen.height;
 	}
 }

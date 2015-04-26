@@ -13,25 +13,28 @@ public class MouseOrbitImproved : MonoBehaviour
 	public float distanceMin = .5f;
 	public float distanceMax = 20f;
 	public float lerpSpeed = 2.5F;
-
-	Vector3 pesen;
+	public Vector3 startingRotation;
+	Vector3 offset;
 	float x = 0.0f;
 	float y = 0.0f;
 	Quaternion rotation;
 	Vector3 position;
+	bool isAnimating = true;
 	public float xSpeed = Screen.width / 8;
 	public float ySpeed = Screen.height / 8;
 
 	// Use this for initialization
 	void Start ()
 	{
-		pesen = targetTransform.position;
-		rotation = targetTransform.rotation;
+		offset = targetTransform.position;
+		//rotation = targetTransform.rotation;
 		position = targetTransform.position;
-		Vector3 angles = transform.eulerAngles;
-		x = angles.y;
-		y = angles.x;
-		
+		rotation = transform.rotation;
+		x = transform.rotation.eulerAngles.x;
+		y = transform.rotation.eulerAngles.y;
+		transform.rotation = targetTransform.rotation;
+		StartCoroutine(RotationLerp());
+
 		// Make the rigid body not change rotation
 		if (GetComponent<Rigidbody> ())
 			GetComponent<Rigidbody> ().freezeRotation = true;
@@ -39,15 +42,15 @@ public class MouseOrbitImproved : MonoBehaviour
 
 	void Update ()
 	{
-		pesen = Vector3.Lerp (pesen, targetTransform.position, Time.deltaTime * lerpSpeed);
-		updateCamera ();
+		offset = Vector3.Lerp (offset, targetTransform.position, Time.deltaTime * lerpSpeed);
+		if (!isAnimating) updateCamera ();
 	}
 	
 	public void OnScroll ()
 	{
 		distance = Mathf.Clamp (distance - Input.GetAxis ("Mouse ScrollWheel") * 5, distanceMin, distanceMax);
 		RaycastHit hit;
-		if (Physics.Linecast (pesen, pesen, out hit)) {
+		if (Physics.Linecast (offset, offset, out hit)) {
 			distance -= hit.distance;
 		}
 	}
@@ -71,18 +74,18 @@ public class MouseOrbitImproved : MonoBehaviour
 
 		distance = Mathf.Clamp (distance + deltaMagnitudeDiff * zoomSpeed, distanceMin, distanceMax);
 		RaycastHit hit;
-		if (Physics.Linecast (pesen, pesen, out hit)) {
+		if (Physics.Linecast (offset, offset, out hit)) {
 			distance -= hit.distance;
 		}
 	}
 
 	public void OnDrag ()
 	{
-		x += Input.GetAxis ("Mouse X") * xSpeed * distance * 0.02f;
-		y -= Input.GetAxis ("Mouse Y") * ySpeed * 0.02f;
-		y = ClampAngle (y, yMinLimit, yMaxLimit);
+		x -= Input.GetAxis ("Mouse Y") * xSpeed * distance * 0.02f;
+		y += Input.GetAxis ("Mouse X") * ySpeed * 0.02f;
+		x = ClampAngle (x, yMinLimit, yMaxLimit);
 
-		rotation = Quaternion.Euler (y, x, 0);
+		rotation = Quaternion.Euler (x, y, 0);
 	}
 
 	public void changeTarget (Transform newTargetTransform)
@@ -95,7 +98,7 @@ public class MouseOrbitImproved : MonoBehaviour
 		if (Input.touchCount == 2)
 			TouchZoom ();
 		Vector3 negDistance = new Vector3 (0.0f, 0.0f, -distance);
-		position = rotation * negDistance + pesen;
+		position = rotation * negDistance + offset;
 
 		transform.rotation = rotation;
 		transform.position = position;
@@ -110,5 +113,15 @@ public class MouseOrbitImproved : MonoBehaviour
 		return Mathf.Clamp (angle, min, max);
 	}
 	
-	
+	IEnumerator RotationLerp() {
+		isAnimating = true;
+		while (Quaternion.Angle(transform.rotation, rotation)>0.2f){
+			transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.2f);
+			Vector3 negDistance = new Vector3 (0.0f, 0.0f, -distance);
+			position = rotation * negDistance + offset;
+			transform.position = position;
+			yield return null;
+		}
+		isAnimating = false;
+	}
 }

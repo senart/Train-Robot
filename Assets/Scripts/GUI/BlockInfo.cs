@@ -6,7 +6,6 @@ public class BlockInfo : MonoBehaviour {
 	public Vector3 rotation;
 	public ModuleStats stats;
 	public ModuleDescriptionLabels labels;
-	public GameObject currentModule;
 
 	void Start() {
 		SetLabels();

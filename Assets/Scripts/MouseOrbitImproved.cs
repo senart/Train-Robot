@@ -81,6 +81,7 @@ public class MouseOrbitImproved : MonoBehaviour
 
 	public void OnDrag ()
 	{
+		if (isAnimating) return;
 		x -= Input.GetAxis ("Mouse Y") * xSpeed * distance * 0.02f;
 		y += Input.GetAxis ("Mouse X") * ySpeed * 0.02f;
 		x = ClampAngle (x, yMinLimit, yMaxLimit);

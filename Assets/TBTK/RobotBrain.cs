@@ -28,6 +28,7 @@ public class RobotBrain : MonoBehaviour
 	void OnLevelWasLoaded(int level)
 	{
 		if (level == 2) {
+			//TurnManager.AddPlayer(this);  //Implement ASAP
 			grid = new MyTile[columns, rows];
 			//Populate the MyTile grid and index each tile with col and row numbers
 			int i = 0;

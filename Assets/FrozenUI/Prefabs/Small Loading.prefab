@@ -131,12 +131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2782a4437c871104b972d8e073a8c776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bar: {fileID: 11400010}
-  label: {fileID: 0}
-  easing: 0
-  duration: 5
-  startDelay: 0
-  holdTime: 1
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -210,11 +204,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8226cdf29a68e241b094a2c9d9c1548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 11400006}
-  bar: {fileID: 11400010}
-  offset: 3
-  fading: 1
-  fadeDuration: .5
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1

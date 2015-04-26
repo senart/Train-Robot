@@ -130,6 +130,7 @@ MonoBehaviour:
   startingHP: 800
   startingProtection: 0
   moduleName: Protection Module
+  moduleDescription: 
   damage: 0
   protection: 0
   HP: 0

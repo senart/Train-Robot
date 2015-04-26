@@ -390,12 +390,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5054172b71ab0445960639a8a062ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingState: 0
-  container: {fileID: 11400004}
-  offlineOverlay: {fileID: 11400002}
-  stateOverlay: {fileID: 11400026}
-  levelContainer: {fileID: 11400014}
-  levelLabel: {fileID: 11400016}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -9,6 +9,8 @@ TagManager:
   - RotateCenter
   - MovementJoystick
   - MoveCenter
+  - mov
+  - rot
   layers:
   - Default
   - TransparentFX

@@ -616,6 +616,7 @@ MonoBehaviour:
   frontR: {fileID: 403918}
   key: 323
   canShoot: 0
+  hasToShoot: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

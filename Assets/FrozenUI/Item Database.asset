@@ -11,30 +11,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e27f24245c6cff409262e2cbb685467, type: 3}
   m_Name: Item Database
   m_EditorClassIdentifier: 
-  items:
-  - ID: 1
-    Name: 53776f7264206f662041676573
-    Icon: {fileID: 2800000, guid: 1854886ae837b8245899169abd035f9f, type: 3}
-    Description: 4c6f72656d20697073756d20646f6c6f722073697420616d65742c20636f6e73656374657475722061646970697363696e6720656c69742e
-    ItemType: 1
-    Type: 53776f7264
-    Subtype: 54776f2d48616e646564
-    Damage: 1200
-    AttackSpeed: 3.5999999
-    Block: 0
-    Armor: 0
-    Stamina: 230
-    Strength: 370
-  - ID: 2
-    Name: 536869656c64206f66207468652050726f746563746f72
-    Icon: {fileID: 2800000, guid: 2426722c66e3fb048806a7664d1ac556, type: 3}
-    Description: 4c6f72656d20697073756d20646f6c6f722073697420616d65742c20636f6e73656374657475722061646970697363696e6720656c69742e20446f6e65632066657567696174206c696265726f2e
-    ItemType: 2
-    Type: 536869656c64
-    Subtype: 4f66662d48616e64
-    Damage: 0
-    AttackSpeed: 0
-    Block: 1029
-    Armor: 8100
-    Stamina: 405
-    Strength: 160

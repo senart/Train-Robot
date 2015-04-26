@@ -131,6 +131,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &2838390
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -208,6 +209,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &3411982
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -285,6 +287,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &13791291
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -362,6 +365,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &18830831
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -439,6 +443,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &38052643
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -516,6 +521,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &48453217
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -593,6 +599,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &56116792
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -670,6 +677,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &60599924
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -703,6 +711,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 60599921}
   m_Mesh: {fileID: 4300000, guid: 70537066fb8a0334abeac087cf7e3d2a, type: 3}
+--- !u!1 &68889038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100004, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
+  m_PrefabInternal: {fileID: 1933470696}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 68889039}
+  m_Layer: 8
+  m_Name: NGUI Snapshot Point 36
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &68889039
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400004, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
+  m_PrefabInternal: {fileID: 1933470696}
+  m_GameObject: {fileID: 68889038}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1933470697}
+  m_RootOrder: 1
 --- !u!1 &69802445
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,6 +782,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &69802448
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -824,6 +860,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &78346500
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -901,6 +938,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &79094690
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -978,6 +1016,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &89722357
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1055,6 +1094,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &91991882
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1132,6 +1172,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &96885909
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1209,6 +1250,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &109597593
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1286,6 +1328,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &115888877
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1363,6 +1406,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &134938763
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1440,6 +1484,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &135901454
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1517,6 +1562,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &140795012
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1594,6 +1640,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &140874507
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1671,6 +1718,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &148586945
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1748,6 +1796,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &164969181
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1825,6 +1874,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &173668228
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1902,6 +1952,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &178673663
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1979,6 +2030,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &193473211
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2056,6 +2108,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &195116623
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2133,6 +2186,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &199693776
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2210,6 +2264,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &203347886
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2287,6 +2342,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &203993066
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2364,6 +2420,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &210574871
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2441,6 +2498,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &210622772
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2518,6 +2576,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &212242985
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2595,6 +2654,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &215161906
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2672,6 +2732,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &217662769
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2846,6 +2907,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &229315266
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2923,6 +2985,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &235153316
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3000,6 +3063,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &235623043
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3077,6 +3141,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &236214157
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3214,6 +3279,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &242566363
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3291,6 +3357,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &245202154
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3368,6 +3435,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &251366290
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3445,6 +3513,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &267348382
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3522,6 +3591,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &277997203
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3599,6 +3669,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &281917296
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3676,6 +3747,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &301102823
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3753,6 +3825,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &302071966
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3830,6 +3903,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &310402149
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3907,6 +3981,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &311178727
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3984,6 +4059,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &316653694
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4061,6 +4137,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &318530583
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4138,6 +4215,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &328193983
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4203,6 +4281,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &343280109
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4292,6 +4371,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &345931012
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4369,6 +4449,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &374584131
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4446,6 +4527,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &396535685
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4523,6 +4605,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &396711257
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4600,6 +4683,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &398465830
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4677,6 +4761,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &418644579
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4754,6 +4839,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &422894953
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4831,6 +4917,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &428124314
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4908,6 +4995,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &429029513
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4985,6 +5073,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &433092911
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5062,6 +5151,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &433400541
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5139,6 +5229,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &442000793
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5216,6 +5307,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &446023787
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5293,6 +5385,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &449503575
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5370,6 +5463,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &456950345
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5447,6 +5541,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &457961370
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5524,6 +5619,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &464863582
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5601,6 +5697,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &472010346
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5678,6 +5775,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &485950620
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5755,6 +5853,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &492845772
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5944,6 +6043,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &507517692
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6021,6 +6121,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &518857742
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6098,6 +6199,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &534299555
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6175,6 +6277,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &544159103
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6252,6 +6355,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &554623912
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6329,6 +6433,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &579218506
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6406,6 +6511,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &591054764
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6483,6 +6589,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &593481064
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6560,6 +6667,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &594042953
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6637,6 +6745,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &603868399
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6714,6 +6823,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &622704591
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6791,6 +6901,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &634296664
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6868,6 +6979,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &659340928
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6945,6 +7057,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &670273391
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7022,6 +7135,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &672385060
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7099,6 +7213,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &673200979
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7176,6 +7291,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &690356996
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7253,6 +7369,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &690592779
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7330,6 +7447,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &690947253
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7407,6 +7525,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &695329020
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7484,6 +7603,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &695873936
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7561,6 +7681,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &697965407
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7638,6 +7759,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &703636252
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7715,6 +7837,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &709721115
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7792,6 +7915,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &719859119
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7869,6 +7993,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &725550641
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7946,6 +8071,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &729028271
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8023,6 +8149,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &734553060
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8100,6 +8227,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &736952792
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8177,6 +8305,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &744664588
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8254,6 +8383,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &747194134
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8331,6 +8461,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &756372236
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8408,6 +8539,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &767327083
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8485,6 +8617,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &774421108
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8562,6 +8695,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &780388555
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8639,6 +8773,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &783761191
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8716,6 +8851,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &785307662
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8793,6 +8929,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &789568408
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8870,6 +9007,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &801091349
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8947,6 +9085,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &809891013
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9024,6 +9163,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &819420071
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9101,6 +9241,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &820570169
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9178,6 +9319,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &823520057
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9255,6 +9397,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &830458308
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9332,6 +9475,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &858321619
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9409,6 +9553,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &861256230
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9486,6 +9631,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &863116729
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9563,6 +9709,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &864670837
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9640,6 +9787,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &868908378
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9717,6 +9865,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &889805182
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9794,6 +9943,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &894813343
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9871,6 +10021,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &910628274
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9948,6 +10099,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &929288676
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10025,6 +10177,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &929469513
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10102,6 +10255,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &950114978
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10179,6 +10333,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &951697899
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10256,6 +10411,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &957082718
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10333,6 +10489,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &959468966
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10410,6 +10567,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &959780283
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10487,6 +10645,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &961924505
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10564,6 +10723,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &962817589
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10641,6 +10801,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &987171738
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10718,6 +10879,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &998729617
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10795,6 +10957,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1002880883
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10872,6 +11035,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1016461973
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10949,6 +11113,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1032693191
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11026,6 +11191,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1036460587
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11103,6 +11269,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1039426746
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11180,6 +11347,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1046954328
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11257,6 +11425,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1050665239
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11334,6 +11503,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1056310860
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11411,6 +11581,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1070285542
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11488,6 +11659,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1080306013
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11628,6 +11800,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1104175805
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11705,6 +11878,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1104441128
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11782,6 +11956,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1115769855
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11859,6 +12034,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1142534290
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11936,6 +12112,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1151638466
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12013,6 +12190,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1156033334
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12090,6 +12268,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1165419456
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12167,6 +12346,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1190227042
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12244,6 +12424,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1192245421
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12321,6 +12502,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1207650188
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12398,6 +12580,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1210128068
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12475,6 +12658,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1210425739
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12552,6 +12736,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1228706198
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12629,6 +12814,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1232752800
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12706,6 +12892,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1247714477
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12783,6 +12970,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1248443510
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12860,6 +13048,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1254530848
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12937,6 +13126,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1260216222
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13014,6 +13204,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1261059710
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13091,6 +13282,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1264555485
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13168,6 +13360,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1264769033
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13245,6 +13438,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1265233937
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13322,6 +13516,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1273252841
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13399,6 +13594,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1277706967
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13476,6 +13672,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1279873018
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13553,6 +13750,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1291728434
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13630,6 +13828,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1312041893
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13707,6 +13906,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1323509599
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13784,6 +13984,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1326046568
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13861,6 +14062,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1326508889
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13967,6 +14169,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1360634977
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14044,6 +14247,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1366495065
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14121,6 +14325,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1408449834
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14198,6 +14403,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1423104942
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14275,6 +14481,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1429159198
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14352,6 +14559,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1434340595
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14429,6 +14637,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1447796068
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14506,6 +14715,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1453138606
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14671,6 +14881,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1473487882
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14748,6 +14959,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1476657080
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14825,6 +15037,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1483424028
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14902,6 +15115,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1498504022
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14979,6 +15193,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1508771532
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15056,6 +15271,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1510547508
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15133,6 +15349,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1516593280
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15210,6 +15427,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1521557316
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15287,6 +15505,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1523099488
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15364,6 +15583,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1529150593
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15441,6 +15661,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1540129313
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15518,6 +15739,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1559685670
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15595,6 +15817,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1565724632
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15672,6 +15895,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1567297388
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15749,6 +15973,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1571631462
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15826,6 +16051,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1584309484
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15903,6 +16129,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1595387542
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15980,6 +16207,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1600845942
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16057,6 +16285,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1610279351
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16134,6 +16363,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1613887102
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16211,6 +16441,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1645588466
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16288,6 +16519,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1647189815
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16365,6 +16597,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1658247436
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16442,6 +16675,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1660049521
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16519,6 +16753,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1665876934
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16596,6 +16831,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1675661837
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16673,6 +16909,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1704896590
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16750,6 +16987,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1720650795
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16827,6 +17065,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1722425460
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16904,6 +17143,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1722610972
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16981,6 +17221,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1739536771
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17058,6 +17299,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1756698830
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17135,6 +17377,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1759015044
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17209,6 +17452,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5921d6589291c49409c2e7e09876acfe, type: 2}
+  m_RootGameObject: {fileID: 987171735}
   m_IsPrefabParent: 0
 --- !u!1 &1766774792
 GameObject:
@@ -17254,6 +17498,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1766774795
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17287,6 +17532,97 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1766774792}
   m_Mesh: {fileID: 4300000, guid: 70537066fb8a0334abeac087cf7e3d2a, type: 3}
+--- !u!1 &1786252997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
+  m_PrefabInternal: {fileID: 1933470696}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1786252998}
+  - 114: {fileID: 1786252999}
+  m_Layer: 8
+  m_Name: Label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1786252998
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
+  m_PrefabInternal: {fileID: 1933470696}
+  m_GameObject: {fileID: 1786252997}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1933470697}
+  m_RootOrder: 0
+--- !u!114 &1786252999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 7c3a28b051e872b448d4808cfcf9199c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1933470696}
+  m_GameObject: {fileID: 1786252997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftAnchor:
+    target: {fileID: 1933470697}
+    relative: 0
+    absolute: 4
+  rightAnchor:
+    target: {fileID: 1933470697}
+    relative: 1
+    absolute: -4
+  bottomAnchor:
+    target: {fileID: 1933470697}
+    relative: 0
+    absolute: 4
+  topAnchor:
+    target: {fileID: 1933470697}
+    relative: 1
+    absolute: -4
+  updateAnchors: 1
+  mColor: {r: 0, g: 0, b: 0, a: .737254918}
+  mPivot: 4
+  mWidth: 184
+  mHeight: 32
+  mDepth: 5
+  autoResizeBoxCollider: 0
+  hideIfOffScreen: 0
+  keepAspectRatio: 0
+  aspectRatio: 5.75
+  keepCrispWhenShrunk: 1
+  mTrueTypeFont: {fileID: 0}
+  mFont: {fileID: 11400000, guid: 29056518aafb01b49a5b08faf8e30cff, type: 2}
+  mText: Test Augmented Reality
+  mFontSize: 20
+  mFontStyle: 0
+  mAlignment: 0
+  mEncoding: 1
+  mMaxLineCount: 0
+  mEffectStyle: 0
+  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mSymbols: 1
+  mEffectDistance: {x: 1, y: 1}
+  mOverflow: 0
+  mMaterial: {fileID: 0}
+  mApplyGradient: 1
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: .699999988, g: .699999988, b: .699999988, a: 1}
+  mSpacingX: 0
+  mSpacingY: 0
+  mShrinkToFit: 0
+  mMaxLineWidth: 0
+  mMaxLineHeight: 0
+  mLineWidth: 0
+  mMultiline: 1
 --- !u!1 &1795052236
 GameObject:
   m_ObjectHideFlags: 0
@@ -17331,6 +17667,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1795052239
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17408,6 +17745,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1813313224
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17485,6 +17823,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1817035549
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17562,6 +17901,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1829149019
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17639,6 +17979,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1838142051
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17716,6 +18057,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1843159386
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17793,6 +18135,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1858712219
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17870,6 +18213,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1880587358
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17947,6 +18291,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1884441027
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18024,6 +18369,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1885987602
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18101,6 +18447,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1922645094
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18259,15 +18606,41 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
+  m_RootGameObject: {fileID: 1933470698}
   m_IsPrefabParent: 0
---- !u!4 &1933470697 stripped
+--- !u!4 &1933470697
 Transform:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400002, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
   m_PrefabInternal: {fileID: 1933470696}
---- !u!1 &1933470698 stripped
+  m_GameObject: {fileID: 1933470698}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 295, y: 260, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1786252998}
+  - {fileID: 68889039}
+  m_Father: {fileID: 496908499}
+  m_RootOrder: 1
+--- !u!1 &1933470698
 GameObject:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100002, guid: 7c3a28b051e872b448d4808cfcf9199c, type: 2}
   m_PrefabInternal: {fileID: 1933470696}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1933470697}
+  - 114: {fileID: 1933470702}
+  - 114: {fileID: 1933470701}
+  - 65: {fileID: 1933470700}
+  - 114: {fileID: 1933470699}
+  m_Layer: 8
+  m_Name: Test Augmented
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!114 &1933470699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18279,6 +18652,96 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db4c3557d3e60c342b421f34ee3a951d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &1933470700
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: 7c3a28b051e872b448d4808cfcf9199c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1933470696}
+  m_GameObject: {fileID: 1933470698}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 192, y: 40, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1933470701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 7c3a28b051e872b448d4808cfcf9199c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1933470696}
+  m_GameObject: {fileID: 1933470698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdca5042b1d12a4890ec1bd4f04290d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenTarget: {fileID: 1933470698}
+  hover: {r: .882352948, g: .784313738, b: .588235319, a: 1}
+  pressed: {r: .717647076, g: .639215708, b: .482352942, a: 1}
+  disabledColor: {r: .5, g: .5, b: .5, a: 1}
+  duration: .200000003
+  dragHighlight: 0
+  hoverSprite: 
+  pressedSprite: 
+  disabledSprite: 
+  hoverSprite2D: {fileID: 0}
+  pressedSprite2D: {fileID: 0}
+  disabledSprite2D: {fileID: 0}
+  pixelSnap: 0
+  onClick: []
+--- !u!114 &1933470702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 7c3a28b051e872b448d4808cfcf9199c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1933470696}
+  m_GameObject: {fileID: 1933470698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: -333
+  rightAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: -141
+  bottomAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: -55
+  topAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: -15
+  updateAnchors: 1
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 4
+  mWidth: 192
+  mHeight: 40
+  mDepth: 4
+  autoResizeBoxCollider: 1
+  hideIfOffScreen: 0
+  keepAspectRatio: 0
+  aspectRatio: 4.80000019
+  mType: 1
+  mFillDirection: 4
+  mFillAmount: 1
+  mInvert: 0
+  mFlip: 0
+  centerType: 1
+  leftType: 1
+  rightType: 1
+  bottomType: 1
+  topType: 1
+  mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
+  mSpriteName: Button
+  mFillCenter: 1
 --- !u!1 &1946457089
 GameObject:
   m_ObjectHideFlags: 0
@@ -18323,6 +18786,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1946457092
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18400,6 +18864,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1971587622
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18477,6 +18942,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1993038054
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18554,6 +19020,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &1993613893
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18631,6 +19098,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &2025035421
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19001,6 +19469,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &2039711732
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19078,6 +19547,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &2054192913
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19155,6 +19625,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &2063987294
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19232,6 +19703,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &2066502885
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19309,6 +19781,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &2067465559
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19386,6 +19859,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &2078928949
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19463,6 +19937,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &2086504687
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19540,6 +20015,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &2089912285
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19617,6 +20093,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &2099308904
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19694,6 +20171,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &2101587558
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19771,6 +20249,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &2107123593
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19848,6 +20327,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &2114041262
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19925,6 +20405,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &2120995432
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20002,6 +20483,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &2133239713
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20079,6 +20561,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &2136946556
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20156,6 +20639,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &2139671099
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20233,6 +20717,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &2142745646
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20310,6 +20795,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &2144948475
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20387,6 +20873,7 @@ MonoBehaviour:
   ID: 0
   column: 0
   row: 0
+  isObstacle: 0
 --- !u!23 &2146217730
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -647,11 +647,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73f54b4d843e17844b5f95e8f7a63e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WindowId: 0
-  contentHolder: {fileID: 400000}
-  startHidden: 0
-  fading: 1
-  fadeDuration: .5
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -833,9 +828,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2feec960c3b67544a974c33707e0371a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonPrev: {fileID: 11400032}
-  buttonNext: {fileID: 11400026}
-  pagesContainer: {fileID: 400032}
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1216,50 +1208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b72c33535f4f5e40adb3383b4104e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tweenTarget: {fileID: 100026}
-  hover:
-    r: .580392182
-    g: .843137264
-    b: 1
-    a: 1
-  pressed:
-    r: .360784322
-    g: .521568656
-    b: .615686297
-    a: 1
-  disabledColor:
-    r: .5
-    g: .5
-    b: .5
-    a: 1
-  duration: .200000003
-  dragHighlight: 0
-  hoverSprite: 
-  pressedSprite: 
-  disabledSprite: 
-  pixelSnap: 0
-  onClick: []
-  additionalTarget: {fileID: 11400018}
-  additionalNormal:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  additionalHover:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  additionalPressed:
-    r: .674509823
-    g: .674509823
-    b: .674509823
-    a: 1
-  additionalDisabled:
-    r: .5
-    g: .5
-    b: .5
-    a: 1
 --- !u!114 &11400028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1371,50 +1319,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b72c33535f4f5e40adb3383b4104e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tweenTarget: {fileID: 100030}
-  hover:
-    r: .580392182
-    g: .843137264
-    b: 1
-    a: 1
-  pressed:
-    r: .360784322
-    g: .521568656
-    b: .615686297
-    a: 1
-  disabledColor:
-    r: .5
-    g: .5
-    b: .5
-    a: 1
-  duration: .200000003
-  dragHighlight: 0
-  hoverSprite: 
-  pressedSprite: 
-  disabledSprite: 
-  pixelSnap: 0
-  onClick: []
-  additionalTarget: {fileID: 11400006}
-  additionalNormal:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  additionalHover:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  additionalPressed:
-    r: .674509823
-    g: .674509823
-    b: .674509823
-    a: 1
-  additionalDisabled:
-    r: .5
-    g: .5
-    b: .5
-    a: 1
 --- !u!114 &11400034
 MonoBehaviour:
   m_ObjectHideFlags: 1

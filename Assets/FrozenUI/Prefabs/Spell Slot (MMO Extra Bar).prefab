@@ -533,11 +533,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f11424ac34d44f46801acb22a84242a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownSprite: {fileID: 11400008}
-  cooldownLabel: {fileID: 11400002}
-  cooldownSparklePrefab: {fileID: 100000, guid: ea9a6d17a8b95c84f801bc75bca5cdc8,
-    type: 2}
-  IsOnCooldown: 0
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -549,31 +544,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8092b4550843154c81c7f81d5351755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restriction: 0
-  cloneOnDrag: 0
-  internalType: 0
-  iconSprite: {fileID: 11400004}
-  dragAndDropEnabled: 1
-  IsStatic: 0
-  AllowThrowAway: 1
-  hoverEffectType: 2
-  hoverEffectSprite: {fileID: 11400006}
-  hoverEffectColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  hoverEffectSpeed: .150000006
-  pressEffectType: 1
-  pressEffectSprite: {fileID: 0}
-  pressEffectColor:
-    r: .676470578
-    g: .676470578
-    b: .676470578
-    a: 1
-  pressEffectSpeed: .150000006
-  pressEffectInstaOut: 1
-  cooldownHandle: {fileID: 11400012}
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -225,50 +225,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b72c33535f4f5e40adb3383b4104e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tweenTarget: {fileID: 100002}
-  hover:
-    r: .580392182
-    g: .843137264
-    b: 1
-    a: 1
-  pressed:
-    r: .360784322
-    g: .521568656
-    b: .615686297
-    a: 1
-  disabledColor:
-    r: .5
-    g: .5
-    b: .5
-    a: 1
-  duration: .200000003
-  dragHighlight: 0
-  hoverSprite: 
-  pressedSprite: 
-  disabledSprite: 
-  pixelSnap: 0
-  onClick: []
-  additionalTarget: {fileID: 11400000}
-  additionalNormal:
-    r: .890196085
-    g: .941176474
-    b: .984313726
-    a: 1
-  additionalHover:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  additionalPressed:
-    r: .674509823
-    g: .674509823
-    b: .674509823
-    a: 1
-  additionalDisabled:
-    r: .5
-    g: .5
-    b: .5
-    a: 1
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1

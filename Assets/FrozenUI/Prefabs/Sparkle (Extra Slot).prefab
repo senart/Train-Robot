@@ -90,7 +90,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 629e81367834d3e4da1917f12d8657c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tweenDuration: .300000012
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

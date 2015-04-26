@@ -162,15 +162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e31295a6c7889145b3c6982566f049e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  columns: 2
-  direction: 0
-  sorting: 4
-  hideInactive: 1
-  keepWithinPanel: 0
-  padding: {x: 0, y: 0}
-  sorted: 1
-  overrideSorting: 1
-  resizeContainer: 1
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -281,10 +272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54752252126b0f4418126160470430e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  container: {fileID: 11400004}
-  table: {fileID: 11400002}
-  leftLabel: {fileID: 11400006}
-  rightLabel: {fileID: 11400000}
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -296,10 +283,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8223d662e1f294f85ab2bd2cc35572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left: 0
-  right: 0
-  top: 0
-  bottom: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

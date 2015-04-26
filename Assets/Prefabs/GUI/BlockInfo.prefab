@@ -1866,7 +1866,6 @@ MonoBehaviour:
   rotation: {x: 0, y: 20, z: 0}
   stats: {fileID: 11450288}
   labels: {fileID: 11419528}
-  currentModule: {fileID: 182510}
 --- !u!114 &11408260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3207,6 +3206,8 @@ MonoBehaviour:
   cloneOnDrag: 1
   pressAndHoldDelay: 1
   prefab: {fileID: 186892, guid: 9127591d3084dff488eec54c6f596022, type: 2}
+  cubeDummy: {fileID: 0}
+  prefabDummy: {fileID: 0}
 --- !u!114 &11476400
 MonoBehaviour:
   m_ObjectHideFlags: 1

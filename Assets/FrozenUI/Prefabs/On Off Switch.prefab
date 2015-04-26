@@ -56,10 +56,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 816c0ee1e75dcb44cbaab04733822dc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetSprite: {fileID: 11400004}
-  atlas: {fileID: 11400000, guid: 0af66dd81b345e1469edaa493a30079b, type: 2}
-  offSprite: 4f6e4f66665377697463685f4f6666
-  onSprite: 4f6e4f66665377697463685f4f6e
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -270,6 +270,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b323331d6fcc97344b1b17ee96f16448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
   connectionIP: 83.143.253.215
   connectionPort: 25001

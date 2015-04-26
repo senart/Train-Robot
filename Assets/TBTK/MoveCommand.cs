@@ -5,10 +5,10 @@ public class MoveCommand : Command
 {
 	private int numTiles;
 
-	public override void Execute()
+	public override void Execute(RobotBrain playerBrain)
 	{
 		numTiles = myVar.GetData ();
 		Debug.Log ("Move!");
-		GameObject.Find ("Player").GetComponent<MyUnit> ().MovePlayerForward (numTiles);
+		playerBrain.MovePlayerForward (numTiles);
 	}
 }

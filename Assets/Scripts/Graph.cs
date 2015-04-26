@@ -63,13 +63,15 @@ public class Graph : MonoBehaviour
 		List<int> surrounding = new List<int> ();
 		
 		foreach (Transform module in transform.GetComponentInChildren<Transform>()) {
-			if ((module.position == pos + Vector3.up) ||
-			    (module.position == pos + Vector3.down) ||
-			    (module.position == pos + Vector3.left) ||
-			    (module.position == pos + Vector3.right) ||
-			    (module.position == pos + Vector3.forward) ||
-			    (module.position == pos + Vector3.back))
-				surrounding.Add(module.GetComponent<Chosen>().ID);
+			if (module.GetComponent<Chosen> ()) {
+				if ((module.position == pos + Vector3.up) ||
+					(module.position == pos + Vector3.down) ||
+					(module.position == pos + Vector3.left) ||
+					(module.position == pos + Vector3.right) ||
+					(module.position == pos + Vector3.forward) ||
+					(module.position == pos + Vector3.back))
+					surrounding.Add (module.GetComponent<Chosen> ().ID);
+			}
 		}
 		return surrounding;
 	}

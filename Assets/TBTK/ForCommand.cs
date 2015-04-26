@@ -1,11 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class IfCommand : Command 
-{
+public class ForCommand : Command {
+	
 	public List<Command> coms;
-
+	
 	public override void UpdateCommands()
 	{
 		coms = new List<Command> ();
@@ -15,13 +15,13 @@ public class IfCommand : Command
 			}
 		}
 	}
-
+	
 	public override void Execute(RobotBrain playerBrain)
 	{
 		UpdateCommands ();
-		if(myVar.GetBoolData()) {
-			for(int i =0; i < coms.Count;i++){
-				coms[i].Execute(playerBrain);
+		for (int i = 0; i < myVar.GetData(); i++) {
+			for(int j =0; j < coms.Count;j++){
+				coms[j].Execute(playerBrain);
 			}
 		}
 	}

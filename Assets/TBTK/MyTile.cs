@@ -3,10 +3,11 @@ using System.Collections;
 
 public class MyTile : MonoBehaviour {
 
-	//public MyUnit unit;
+	//public RobotBrain brain;
 	public int ID;
 	public int column;
 	public int row;
+	public bool isObstacle;
 
 	public Vector3 GetPos(){
 		return transform.position;

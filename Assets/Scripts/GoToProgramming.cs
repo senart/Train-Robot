@@ -12,6 +12,6 @@ public class GoToProgramming : MonoBehaviour {
 		
 		Destroy(GameObject.FindGameObjectWithTag ("Cube Frame"));  //destroy frame
 		
-		Application.LoadLevel ("programming");  //Switch scenes
+		Application.LoadLevel ("Train");  //Switch scenes
 	}
 }

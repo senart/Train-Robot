@@ -3,13 +3,12 @@ using System.Collections;
 
 public class ShowStats : MonoBehaviour {
 
-	Stats playerStats;
+	public Stats playerStats;
 	public TooltipLabelPair speed, damage, protection, hp;
 	public Color textC, speedC, damageC, protectionC, hpC;
 
 	// Use this for initialization
 	void Start () {
-		playerStats = GameObject.Find ("Player").GetComponent<Stats> ();
 		UpdateStats ();
 	}
 

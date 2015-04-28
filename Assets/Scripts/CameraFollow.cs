@@ -8,21 +8,21 @@ public class CameraFollow : MonoBehaviour {
 
 	public Vector3 offset;                     // The initial offset from the target.
 
-	void OnLevelWasLoaded(int level)
+	void Start()
 	{
-		if (level == 1) {
-			if (targetMove == null) targetMove= GameObject.Find ("Main Module").transform; 
-			// Calculate the initial offset.
-			offset = transform.position - targetMove.position;
-		}
+		if (!targetMove)
+			Debug.Log ("The camera couldn't find transform to move about");
+		else offset = transform.position - targetMove.position;
 	}
 
 	void FixedUpdate ()
 	{
-		// Create a postion the camera is aiming for based on the offset from the target.
-		Vector3 targetCamPos = targetMove.position + offset;
+		if (targetMove) {
+			// Create a postion the camera is aiming for based on the offset from the target.
+			Vector3 targetCamPos = targetMove.position + offset;
 		
-		// Smoothly interpolate between the camera's current position and it's target position.
-		transform.position = Vector3.Lerp (transform.position, targetCamPos, smoothing * Time.deltaTime);
+			// Smoothly interpolate between the camera's current position and it's target position.
+			transform.position = Vector3.Lerp (transform.position, targetCamPos, smoothing * Time.deltaTime);
+		}
 	}
 }

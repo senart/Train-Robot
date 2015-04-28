@@ -10,145 +10,107 @@ public class Boundry
 public class Move : MonoBehaviour
 {
 	public Boundry boundry;
-	public int speed;
-	public float tilt = 10;
-	public float tiltLerpSpeed = 5;
-	public float deadZone = 0.0001F;
-	public float maxVelocity = 10;
+	//Variables for UI controls
 	public GameObject joystickMovement;
 	public GameObject joystickRotation;
-	private float angle;
+	public float deadZone = 0.0001F;
 	private UIJoyStick joyMove;
 	private UIJoyStick joyRotate;
-	private Vector3 movement;
-	private Vector3 velocity;
-	private Rigidbody rigid;
-	private float sqrMaxVelocity;
+	private float angle;
 
-	private float lastSynchronizationTime = 0f;
-	private float syncDelay = 0f;
-	private float syncTime = 0f;
-	private Vector3 syncStartPosition = Vector3.zero;
-	private Vector3 syncEndPosition = Vector3.zero;
-	
-	void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
+	//Movement variables
+	public float MoveSpeed = 15F;
+	public float RotateSpeed = 3F;
+	Vector3 m_CurrentMovement;
+	Vector3 s_CurrentMovement;
+	float m_CurrentTurnSpeed;
+	Rigidbody rigid;
+
+	//Network variables
+	PhotonView m_PhotonView;
+	PhotonRigidbodyView m_RigidView;
+	public bool isControllable;
+
+	void Start ()
 	{
-		Vector3 syncPosition = Vector3.zero;
-		Vector3 syncVelocity = Vector3.zero;
-		if (stream.isWriting)
-		{
-			syncPosition = GetComponent<Rigidbody>().position;
-			stream.Serialize(ref syncPosition);
-			
-			syncPosition = GetComponent<Rigidbody>().velocity;
-			stream.Serialize(ref syncVelocity);
+		isControllable = true;
+		m_PhotonView = GetComponent<PhotonView> ();
+		m_RigidView = GetComponent<PhotonRigidbodyView> ();
+
+
+		rigid = GetComponent<Rigidbody> ();
+		joystickMovement = GameObject.Find ("Movement");
+		joystickRotation = GameObject.Find ("Rotation");
+
+		if (joystickMovement != null && joystickRotation != null) {
+			joyMove = joystickMovement.GetComponent<UIJoyStick> ();
+			joyRotate = joystickRotation.GetComponent<UIJoyStick> ();
 		}
-		else
-		{
-			stream.Serialize(ref syncPosition);
-			stream.Serialize(ref syncVelocity);
-			
-			syncTime = 0f;
-			syncDelay = Time.time - lastSynchronizationTime;
-			lastSynchronizationTime = Time.time;
-			
-			syncEndPosition = syncPosition + syncVelocity * syncDelay;
-			syncStartPosition = GetComponent<Rigidbody>().position;
-		}
-	}
-	
-	void Awake()
-	{
-		lastSynchronizationTime = Time.time;
-	}
-	
-	void Update()
-	{
-		if (GetComponent<NetworkView>().isMine)
-		{
-			InputMovement();
-			InputColorChange();
-		}
-		else
-		{
-			SyncedMovement();
-		}
-	}
-	
-	
-	private void InputMovement()
-	{
-		if (Input.GetKey(KeyCode.W))
-			GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position + Vector3.forward * speed * Time.deltaTime);
-		
-		if (Input.GetKey(KeyCode.S))
-			GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position - Vector3.forward * speed * Time.deltaTime);
-		
-		if (Input.GetKey(KeyCode.D))
-			GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position + Vector3.right * speed * Time.deltaTime);
-		
-		if (Input.GetKey(KeyCode.A))
-			GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position - Vector3.right * speed * Time.deltaTime);
-	}
-	
-	private void SyncedMovement()
-	{
-		syncTime += Time.deltaTime;
-		
-		GetComponent<Rigidbody>().position = Vector3.Lerp(syncStartPosition, syncEndPosition, syncTime / syncDelay);
-	}
-	
-	
-	private void InputColorChange()
-	{
-		if (Input.GetKeyDown(KeyCode.R))
-			ChangeColorTo(new Vector3(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f)));
-	}
-	
-	[RPC] void ChangeColorTo(Vector3 color)
-	{
-		GetComponent<Renderer>().material.color = new Color(color.x, color.y, color.z, 1f);
-		
-		if (GetComponent<NetworkView>().isMine)
-			GetComponent<NetworkView>().RPC("ChangeColorTo", RPCMode.OthersBuffered, color);
+
+		Destroy (GameObject.Find ("TESTER"));
 	}
 
-	void OnLevelWasLoaded (int level)
+	void Update ()
 	{
-		//When the Arena Scene loads
-		if (level == 1) {
-			speed = GetComponent<Stats> ().speed;
-			sqrMaxVelocity = maxVelocity * maxVelocity;
-			rigid = GetComponent<Rigidbody> ();
-			rigid.isKinematic = false;
-			joystickMovement = GameObject.Find ("Movement");
-			joystickRotation = GameObject.Find ("Rotation");
+		if (isControllable) {
+			if (m_PhotonView.isMine == true) {
+				ResetSpeedValues ();
 
-			if (joystickMovement != null && joystickRotation != null) {
-				joyMove = joystickMovement.GetComponent<UIJoyStick> ();
-				joyRotate = joystickRotation.GetComponent<UIJoyStick> ();
+				if (joyMove != null && joyRotate != null) {
+					UpdateForwardMovement ();
+					UpdateLeftRighteMovement ();
+					UpdateRotateMovement ();
+					MoveCharacterController ();
+				}
 			}
-
-			//!!
-			//REMOVE THE FUCKING HALOS AS SOON AS THERE ARE DIFFERENT TEXTURES FOR THE MODULES
-			//Solves a bug where Halo spams erros if it's enabled beforehand. Later, use different textures instead of Halos
-			foreach (Transform childTrans in GameObject.Find ("Player").GetComponentInChildren<Transform>()) {
-				Behaviour halo = (childTrans.GetComponent ("Halo") as Behaviour);
-				if (halo != null)
-					halo.enabled = true; 
-			}
-			//REMOVE THE FUCKING HALOS AS SOON AS THERE ARE DIFFERENT TEXTURES FOR THE MODULES
-			//!!
 		}
+	}
+			
+	void ResetSpeedValues ()
+	{
+		m_CurrentMovement = Vector3.zero;
+		s_CurrentMovement = Vector3.zero;
+		m_CurrentTurnSpeed = 0;
+	}
+			
+	void MoveCharacterController ()
+	{
+		rigid.AddForce (m_CurrentMovement);
+		rigid.AddForce (s_CurrentMovement);
+	}
+			
+	void UpdateForwardMovement ()
+	{
+		m_CurrentMovement = Vector3.forward * MoveSpeed * joyMove.joyStickPosY;
+	}
+			
+	void UpdateLeftRighteMovement ()
+	{
+		s_CurrentMovement = Vector3.right * MoveSpeed * joyMove.joyStickPosX;
+	}
+			
+	void UpdateRotateMovement ()
+	{
+		//JOYSTICK ROTATION
+		if ((Mathf.Abs (joyRotate.joyStickPosX) > deadZone && Mathf.Abs (joyRotate.joyStickPosY) > deadZone)) {
+			angle = Mathf.Atan2 (-joyRotate.joyStickPosX, -joyRotate.joyStickPosY) * Mathf.Rad2Deg;
+		}
+		//Actual rotation
+		Quaternion rot = Quaternion.Euler (0, angle, 0);
+		rigid.rotation = Quaternion.Lerp (rigid.rotation, rot, Time.deltaTime * RotateSpeed);
+
+		//SIMPLE ROTATION
+		//rigid.AddTorque(transform.up*RotateSpeed*joyRotate.joyStickPosY);
+		//rigid.AddTorque(transform.up*RotateSpeed*joyRotate.joyStickPosX);
+	}
 
 //		//For Augmented Reality
 //		if (level == 4) {
 //			transform.parent = GameObject.Find("ImageTarget").transform;
 //			transform.localScale = new Vector3(1,1,1);
 //		}
-	}
 
-
+	//OLD MOVEMENT METHOD
 //	void FixedUpdate ()
 //	{
 //		//If we can assign the joysticks correctly

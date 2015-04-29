@@ -45,7 +45,7 @@ public class Chosen : MonoBehaviour
 		cameraScript = Camera.main.GetComponent<MouseOrbitImproved> ();
 		OnClick ();
 	}
-
+	
 	//Collision detection
 	void OnTriggerEnter (Collider col)
 	{

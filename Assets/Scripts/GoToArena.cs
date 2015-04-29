@@ -1,13 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GoToLocalArena : MonoBehaviour {
+public class GoToArena : MonoBehaviour {
 
-	void OnClick ()
+	public void GoToLocalArena ()
 	{
 		GameObject player = GameObject.Find("Player");
 		DontDestroyOnLoad (player);  //keep contraption
 
+		Application.LoadLevel ("control");  //Switch scenes
+	}
+
+	public void GoToNetworkArena ()
+	{
+		DontDestroyOnLoad (GameObject.Find ("Player"));
 		Application.LoadLevel ("control");  //Switch scenes
 	}
 }

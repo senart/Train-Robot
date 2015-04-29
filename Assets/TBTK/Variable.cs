@@ -1,35 +1,10 @@
 using UnityEngine;
 using System.Collections;
 
-public class Variable : ProgramDropItem
+public class Variable : UIDragDropItem
 {
 	public int data;
 	public bool condition;
-
-	protected override void ActuallyDropItem (GameObject surface)
-	{
-		// Is there a droppable container?
-		UIDragDropContainer container = surface ? NGUITools.FindInParents<UIDragDropContainer>(surface) : null;
-		
-		if (container != null)
-		{
-			//if dropped on a variable, that has a command parent
-			if (surface.GetComponent<Variable> () && surface.transform.parent.GetComponent<Command> ()) {
-				mTrans.parent = surface.transform.parent;
-				mTrans.position = surface.transform.position;
-				surface.transform.parent.GetComponent<Command> ().SetVariable (GetComponent<Variable> ());
-				mDragging = true; //TO PREVENT DRAGS from already placed variable
-				Destroy (surface);
-			} else
-				mTrans.parent = GameObject.Find ("Container").transform;
-		}
-		else
-		{
-			// No valid container under the mouse -- revert the item's parent
-			mTrans.parent = mParent;
-			NGUITools.Destroy(gameObject);
-		}
-	}
 
 	public int GetData ()
 	{
@@ -41,10 +16,56 @@ public class Variable : ProgramDropItem
 		return condition;
 	}
 
-	public void OnClick ()
+	protected override void StartDragging ()
 	{
-		//data = 1;
-		//Display textbox for number input, select Left,Right from list (Left = -90, Right = 90)….
-		// set condition to true...
+		if (!mDragging)
+		{
+			if (cloneOnDrag)
+			{
+				if (gameObject.GetComponent<UIInput>()) {
+					gameObject.GetComponent<UIInput>().isSelected = false;
+					gameObject.GetComponent<UIInput>().RemoveFocus();
+				}
+				GameObject clone = NGUITools.AddChild (transform.parent.gameObject, gameObject);
+				clone.transform.localPosition = transform.localPosition;
+				clone.transform.localRotation = transform.localRotation;
+				clone.transform.localScale = transform.localScale;
+				
+				UIButtonColor bc = clone.GetComponent<UIButtonColor>();
+				if (bc != null) bc.defaultColor = GetComponent<UIButtonColor>().defaultColor;
+				
+				UICamera.currentTouch.dragged = clone;
+				
+				Variable item = clone.GetComponent<Variable>();
+				item.mDragging = true;
+				item.Start();
+				item.OnDragDropStart();
+			}
+			else
+			{
+				mDragging = true;
+				OnDragDropStart();
+			}
+		}
+	}
+
+	protected override void OnDragDropRelease (GameObject surface) {
+		// Re-enable the collider
+		if (mButton != null)
+			mButton.isEnabled = true;
+		else if (mCollider != null)
+			mCollider.enabled = true;
+		else if (mCollider2D != null)
+			mCollider2D.enabled = true;
+
+		GameObject lastHit = UICamera.lastHit.collider.gameObject;
+		if ( lastHit.tag == "VariableContainer") {
+			CommandContainerGUI commandContainer = lastHit.GetComponentInParent<CommandContainerGUI>();
+			if (commandContainer) {
+				commandContainer.SetVariable(gameObject);
+				return;
+			}
+		}
+		NGUITools.Destroy(gameObject);
 	}
 }

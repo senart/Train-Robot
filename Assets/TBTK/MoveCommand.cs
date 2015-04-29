@@ -7,6 +7,7 @@ public class MoveCommand : Command
 
 	public override void Execute(RobotBrain playerBrain)
 	{
+		base.Execute(playerBrain);
 		numTiles = myVar.GetData ();
 		Debug.Log ("Move!");
 		playerBrain.MovePlayerForward (numTiles);

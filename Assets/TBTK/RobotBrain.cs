@@ -147,7 +147,7 @@ public class RobotBrain : MonoBehaviour
 
 		float rotDeg = Mathf.RoundToInt(transform.rotation.eulerAngles.y) + degrees;
 		facingRotation = Quaternion.Euler (0, rotDeg, 0);
-		while(Quaternion.Angle(facingRotation, transform.rotation)>0.4f){
+		while(Quaternion.Angle(facingRotation, transform.rotation)>2f){
 			transform.rotation=Quaternion.Lerp(transform.rotation, facingRotation, Time.deltaTime*rotationSpeed*2);
 			yield return null;
 		}

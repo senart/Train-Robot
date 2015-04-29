@@ -11,6 +11,11 @@ public class GoToProgArena : MonoBehaviour {
 	{
 		player = GameObject.Find ("Player");
 		coms = new List<Command> ();
+
+		CommandContainerGUI firstContainer = GameObject.Find ("Container").GetComponentInChildren<CommandContainerGUI>();
+		firstContainer.gameObject.GetComponent<Command>().UpdateCommands();
+		coms.Add(firstContainer.gameObject.GetComponent<Command>());
+		/*
 		foreach (Transform child in GameObject.Find ("Container").GetComponentInChildren<Transform>()) {
 			if(child.GetComponent<Command>()){
 				child.GetComponent<Command>().UpdateCommands();
@@ -21,11 +26,14 @@ public class GoToProgArena : MonoBehaviour {
 				child.transform.parent = GameObject.Find("Brainz").transform;
 				coms.Add(child.GetComponent<Command>());
 			}
-		}
+		}*/
 
 		player.transform.position = new Vector3 (0, 0, 0);
 		player.AddComponent<RobotBrain>().SetCommands(coms);
 		DontDestroyOnLoad (player);
+		DontDestroyOnLoad (GameObject.Find("UI Root"));
+		GameObject.Find("UI Root").GetComponentInChildren<Camera>().enabled = false;
+		//GameObject.Find("UI Root").SetActive(false);
 		Application.LoadLevel ("programming");
 	}
 }

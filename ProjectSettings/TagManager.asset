@@ -11,6 +11,8 @@ TagManager:
   - MoveCenter
   - mov
   - rot
+  - CommandContainer
+  - VariableContainer
   layers:
   - Default
   - TransparentFX

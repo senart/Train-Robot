@@ -52,15 +52,18 @@ public class NetworkMenu : MonoBehaviour
 	public void Awake()
 	{
 		moduleInfo = new List<ModuleInfo> ();
-		foreach (Transform trans in GameObject.Find("Player").GetComponentInChildren<Transform>()) {
-			ModuleInfo module = new ModuleInfo();
-			module.name = trans.name;
-			module.pos = trans.position;
-			module.rot = trans.rotation;
-			moduleInfo.Add (module);
+		if (!GameObject.Find ("Player"))
+			Application.LoadLevel ("build");
+		else {
+			foreach (Transform trans in GameObject.Find("Player").GetComponentInChildren<Transform>()) {
+				ModuleInfo module = new ModuleInfo ();
+				module.name = trans.name;
+				module.pos = trans.position;
+				module.rot = trans.rotation;
+				moduleInfo.Add (module);
+			}
+			Destroy (GameObject.Find ("Player"));
 		}
-
-		Destroy (GameObject.Find ("Player"));
 		// this makes sure we can use PhotonNetwork.LoadLevel() on the master client and all clients in the same room sync their level automatically
 		PhotonNetwork.automaticallySyncScene = true;
 		

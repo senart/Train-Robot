@@ -26,7 +26,7 @@ public class PlayerNetwork : Photon.MonoBehaviour
 			foreach (ModuleInfo module in moduleInfo) {
 				GameObject temp = PhotonNetwork.Instantiate (module.name, module.pos, module.rot, 0, d);
 			}
-			GameObject.Find ("Stats").GetComponent<ShowStats>().playerStats = gameObject.GetComponent<Stats>();
+			//GameObject.Find ("Stats").GetComponent<ShowStats>().playerStats = gameObject.GetComponent<Stats>();
 		} else {
 
 			//cameraScript.enabled = false;

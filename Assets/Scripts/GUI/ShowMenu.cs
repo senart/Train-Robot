@@ -5,6 +5,11 @@ public class ShowMenu : MonoBehaviour {
 
 	public GameObject menuButtons;
 
+	void Start()
+	{
+		Screen.orientation = ScreenOrientation.LandscapeLeft;
+	}
+
 	void OnClick () {
 		menuButtons.SetActive(true);
 		Destroy(gameObject);
@@ -12,6 +17,5 @@ public class ShowMenu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
 	}
 }

@@ -87,7 +87,7 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &84554269
+--- !u!4 &84554269 stripped
 Transform:
   m_PrefabParentObject: {fileID: 467910, guid: 6cdf99283ef540047a39235f9b2a446d, type: 2}
   m_PrefabInternal: {fileID: 826136142}
@@ -735,7 +735,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 349341496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -509.5, y: 1.52587891e-05, z: 0}
+  m_LocalPosition: {x: -360.5, y: 1.52587891e-05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1045500592}
@@ -891,6 +891,45 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!1 &358594548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 358594550}
+  - 114: {fileID: 358594549}
+  m_Layer: 0
+  m_Name: Quit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &358594549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 358594548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91b06dc77e8bdcd44aab9fa3dfa0f7d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &358594550
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 358594548}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
 --- !u!1 &365431895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,13 +1085,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 1179
+  mWidth: 881
   mHeight: 70
   mDepth: 3
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 16.8428574
+  aspectRatio: 12.5857143
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -1756,7 +1795,7 @@ MonoBehaviour:
   mAtlas: {fileID: 11400000, guid: 0af66dd81b345e1469edaa493a30079b, type: 2}
   mSpriteName: ActionBar_SpellSlot_PressOverlay
   mFillCenter: 1
---- !u!4 &512849957
+--- !u!4 &512849957 stripped
 Transform:
   m_PrefabParentObject: {fileID: 453100, guid: 7d2618c19103caf4c821483d7fb0ac2c, type: 2}
   m_PrefabInternal: {fileID: 254888740}
@@ -1857,12 +1896,12 @@ MonoBehaviour:
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
-  mClipRange: {x: -80, y: 1.52587891e-05, z: 1019, w: 70}
+  mClipRange: {x: -80, y: 1.52587891e-05, z: 721, w: 70}
   mClipSoftness: {x: 4, y: 4}
   mDepth: 2
   mSortingOrder: 0
   mClipOffset: {x: 0, y: 0}
---- !u!4 &562522392
+--- !u!4 &562522392 stripped
 Transform:
   m_PrefabParentObject: {fileID: 412886, guid: 31f92f4894ad169468b9e02eda1bfa8e, type: 2}
   m_PrefabInternal: {fileID: 1653940957}
@@ -2795,7 +2834,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1122528403}
-  m_LocalRotation: {x: .211967126, y: .292861909, z: -.066751644, w: .92997098}
+  m_LocalRotation: {x: .21196714, y: .292861938, z: -.0667516515, w: .929971039}
   m_LocalPosition: {x: -3.53999996, y: -4.1500001, z: .349999994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2934,7 +2973,7 @@ MonoBehaviour:
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
-  mClipRange: {x: 0, y: 35, z: 1178.62183, w: 510}
+  mClipRange: {x: 0, y: 35, z: 881.33783, w: 510}
   mClipSoftness: {x: 4, y: 4}
   mDepth: 0
   mSortingOrder: 0
@@ -3319,7 +3358,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1248733934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 509.310913, y: 0, z: 0}
+  m_LocalPosition: {x: 360.668915, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1786252998}
@@ -3644,16 +3683,16 @@ MonoBehaviour:
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 4
-  mClipRange: {x: 0, y: 0, z: 1179, w: 140}
+  mClipRange: {x: 0, y: 0, z: 881, w: 140}
   mClipSoftness: {x: 4, y: 4}
   mDepth: 3
   mSortingOrder: 0
   mClipOffset: {x: 443, y: 0}
---- !u!4 &1339231378
+--- !u!4 &1339231378 stripped
 Transform:
   m_PrefabParentObject: {fileID: 467910, guid: 6cdf99283ef540047a39235f9b2a446d, type: 2}
   m_PrefabInternal: {fileID: 1809353590}
---- !u!114 &1339231379
+--- !u!114 &1339231379 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11481752, guid: 6cdf99283ef540047a39235f9b2a446d,
     type: 2}
@@ -3717,13 +3756,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 1179
+  mWidth: 881
   mHeight: 720
   mDepth: 1
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.63750005
+  aspectRatio: 1.22361112
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -3797,13 +3836,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 1179
+  mWidth: 881
   mHeight: 140
   mDepth: 2
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 8.42142868
+  aspectRatio: 6.29285717
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -4981,11 +5020,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31f92f4894ad169468b9e02eda1bfa8e, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1831138191
+--- !u!4 &1831138191 stripped
 Transform:
   m_PrefabParentObject: {fileID: 412886, guid: 31f92f4894ad169468b9e02eda1bfa8e, type: 2}
   m_PrefabInternal: {fileID: 1827853678}
---- !u!4 &1870245384
+--- !u!4 &1870245384 stripped
 Transform:
   m_PrefabParentObject: {fileID: 453100, guid: 7d2618c19103caf4c821483d7fb0ac2c, type: 2}
   m_PrefabInternal: {fileID: 942472846}
@@ -5986,7 +6025,7 @@ MonoBehaviour:
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 2.25
---- !u!4 &2131432808
+--- !u!4 &2131432808 stripped
 Transform:
   m_PrefabParentObject: {fileID: 453100, guid: 7d2618c19103caf4c821483d7fb0ac2c, type: 2}
   m_PrefabInternal: {fileID: 2054524951}

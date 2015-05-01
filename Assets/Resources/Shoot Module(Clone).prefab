@@ -729,7 +729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 117306de4b2757649a95d22a9f737334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shot: {fileID: 158622, guid: ee325e7fd34e5a44e9dfb120c39044bd, type: 2}
+  shot: {fileID: 152598, guid: cb2f02c480506b94b8341b7942c3db22, type: 2}
   shotSpawn: {fileID: 417988}
   fireRate: .25
   shootNonStop: 1
